@@ -4,7 +4,7 @@ class Rectangle(shape.Shape):
     """
     class rectangle, inharits from class Shape
     """
-    def __init__(self, shape_id, shape_type, length, witdth): 
+    def __init__(self, shape_id, shape_type, length, witdth, logger): 
        """
        init function 
 
@@ -13,9 +13,9 @@ class Rectangle(shape.Shape):
         shape_type(str): type of the shape
         length(int/float): the length of 2 Sides
         width(int/float): the width of 2 sides
+        logger(logging): the logger
        """
-       self.shape_id = shape_id 
-       self.shape_type = shape_type 
+       super().__init__(shape_id, shape_type, logger) 
        self.length = length
        self.width = witdth
  

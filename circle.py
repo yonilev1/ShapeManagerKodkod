@@ -4,17 +4,17 @@ class Circle(shape.Shape):
     """
     class circle, inharits from class Shape
     """
-    def __init__(self, shape_id, shape_type, radius): 
+    def __init__(self, shape_id, shape_type, radius, logger): 
        """
        init function 
 
        Args:
         shape_id(int): id of shape
         shape_type(str): type of the shape
-        radius(int/float): the radius of 2 Sides
+        radius(int/float): the radius of the circle
+        logger(logging): the logger
        """
-       self.shape_id = shape_id 
-       self.shape_type = shape_type 
+       super().__init__(shape_id, shape_type, logger) 
        self.radius = radius
  
     def get_area(self):
