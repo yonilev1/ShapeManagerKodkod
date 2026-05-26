@@ -4,6 +4,7 @@ class Circle(shape.Shape):
     """
     class circle, inharits from class Shape
     """
+    pei = 3.14
     def __init__(self, shape_id, shape_type, radius, logger): 
        """
        init function 
@@ -27,7 +28,7 @@ class Circle(shape.Shape):
         int/float: area of the circle
        """
        self.logger.info(f"in function get_area to get area of {self.shape_type}")
-       return self.length * self.width / 2 
+       return self.radius * self.radius * Circle.pei 
  
     def get_perimeter(self):
        """
@@ -37,7 +38,7 @@ class Circle(shape.Shape):
             int/float: the circle
        """
        self.logger.info(f"in function get_perimeter to get perimeter of {self.shape_type}")
-       return 4 * self.length 
+       return 2 * Circle.pei * self.radius 
  
     def to_dict(self): 
        """
