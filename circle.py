@@ -6,7 +6,6 @@ class Circle(shape.Shape):
     class circle, inharits from class Shape
     """
     pei = 3.14
-    count = 0
     def __init__(self, shape_id, shape_type, radius, logger): 
        """
        init function 

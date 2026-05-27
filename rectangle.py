@@ -16,7 +16,6 @@ class Rectangle(shape.Shape):
         width(int/float): the width of 2 sides
         logger(logging): the logger
        """
-       count = 0
        super().__init__(shape_id, shape_type, logger) 
        self.logger.info(f"sent shape_id: {shape_id}, shape_type: {shape_type}, logger to super() in base class")
 

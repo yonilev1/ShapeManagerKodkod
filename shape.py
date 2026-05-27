@@ -19,13 +19,13 @@ class Shape:
        logger.info(f"in super constuctor to init:  shape_id: {shape_id}, shape_type: {shape_type}, logger")
 
        if not isinstance(shape_id, int):
-           self.logger.error(f"type of {shape_id} should be int/float and not {type(shape_id)}")
-           raise ValueError(f"type of {shape_id} should be int/float and not {type(shape_id)}")
+           self.logger.error(f"type of {shape_id} should be int and not {type(shape_id)}")
+           raise ValueError(f"type of {shape_id} should be int and not {type(shape_id)}")
        self.shape_id = shape_id 
 
        if not isinstance(shape_type, str):
-           self.logger.error(f"type of {shape_type} should be int/float and not {type(shape_type)}")
-           raise ValueError(f"type of {shape_type} should be int/float and not {type(shape_type)}")
+           self.logger.error(f"type of {shape_type} should be str and not {type(shape_type)}")
+           raise ValueError(f"type of {shape_type} should be str and not {type(shape_type)}")
        self.shape_type = shape_type 
 
        self.logger.info("finished in super init")

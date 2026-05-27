@@ -5,7 +5,6 @@ class Square(shape.Shape):
     """
     class square, inharits from class Shape
     """
-    count = 0
     def __init__(self, shape_id, shape_type, length, logger): 
        """
        init function 

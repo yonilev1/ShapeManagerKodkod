@@ -161,7 +161,6 @@ class ShapeManager:
        function to load the shapes from json
        """
        self.my_logger.info("in shape manager. trying to load the shapes from json")
-       #links_to_classes = {'circle':circle.Circle, 'square':square.Square, 'rectangle':rectangle.Rectangle} 
        try:
             with open('shapes.json', 'r', encoding='utf-8') as json_file:
                 try:
