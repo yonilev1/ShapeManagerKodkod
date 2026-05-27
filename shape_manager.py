@@ -1,5 +1,7 @@
 import logger
-import square, rectangle, circle
+from square import Square
+from rectangle import Rectangle
+from circle import Circle
 import json
 
 class ShapeManager:
@@ -23,6 +25,9 @@ class ShapeManager:
 
        Args:
         shape(str): the shape user wants
+
+       Returns:
+        int: id of created shape
        """
        shape_id = len(self.shapes) + 1
        self.my_logger.info(f"in shape manager. in create shape with shape: {shape}, id: {shape_id}")
@@ -33,13 +38,13 @@ class ShapeManager:
        
        if shape == 'square':
            self.my_logger.info("the shape wanted is square, sending to create in instans")
-           my_shape = square.Square(shape_id, shape, length, self.my_logger)
+           my_shape = Square(shape_id, shape, length, self.my_logger)
        elif shape == 'rectangle':
            self.my_logger.info("the shape wanted is rectangle, sending to create in instans")
-           my_shape = rectangle.Rectangle(shape_id, shape, length, width, self.my_logger)
+           my_shape = Rectangle(shape_id, shape, length, width, self.my_logger)
        elif shape == 'circle':
            self.my_logger.info("the shape wanted is circle, sending to create in instans")
-           my_shape = circle.Circle(shape_id, shape, radius, self.my_logger)
+           my_shape = Circle(shape_id, shape, radius, self.my_logger)
         
        else:
            self.my_logger.error("got wrong shape type, can get only - circle, square, rectangle")
@@ -49,6 +54,7 @@ class ShapeManager:
        self.shapes.append(my_shape)
        self.save_to_json()
        self.my_logger.info("shape created successfully, updated json")
+       return id
             
  
    def get_all_shapes(self):
@@ -57,17 +63,17 @@ class ShapeManager:
        """
        self.my_logger.info(f"in shape manager. in get all shapes to print all shapes. len of shapes: {len(self.shapes)}")
        for shape in self.shapes:
-           if isinstance(shape, circle.Circle):
+           if isinstance(shape, Circle):
                print(f'ID: {shape.shape_id} \n Type: {shape.shape_type} \n Radius: {shape.radius} \n Area: {shape.get_area()} \n Perimeter: {shape.get_perimeter()}')
-           elif isinstance(shape, square.Square):
+           elif isinstance(shape, Square):
                print(f'ID: {shape.shape_id} \n Type: {shape.shape_type} \n Side: {shape.length} \n Area: {shape.get_area()} \n Perimeter: {shape.get_perimeter()}')
-           elif isinstance(shape, rectangle.Rectangle):
+           elif isinstance(shape, Rectangle):
                print(f'ID: {shape.shape_id} \n Type: {shape.shape_type} \n Side_len: {shape.length} \n  Side_wid: {shape.width} \n Area: {shape.get_area()} \n Perimeter: {shape.get_perimeter()}')
             
          
 
 
-   def update_shape(self, shape_id, new_data): 
+   def update_shape(self, shape_id, new_data_1, new_data_2=None): 
        """
        to update a shapes size
 
@@ -81,26 +87,33 @@ class ShapeManager:
            self.my_logger.error(f"shape id not valid, can get only int or float and got {type(shape_id)}")
            raise ValueError(f"shape id not valid, can get only int or float and got {type(shape_id)}")
        
-       if not isinstance(new_data, (int,float)):
-           self.my_logger.error(f"new_data not valid, can get only int or float and got {type(new_data)}")
-           raise ValueError(f"new_data not valid, can get only int or float and got {type(new_data)}")
+       if not isinstance(new_data_1, (int,float)):
+           self.my_logger.error(f"new_data not valid, can get only int or float and got {type(new_data_1)}")
+           raise ValueError(f"new_data not valid, can get only int or float and got {type(new_data_1)}")
+       
+       if not isinstance(new_data_1, (int,float)):
+           self.my_logger.error(f"new_data not valid, can get only int or float and got {type(new_data_2)}")
+           raise ValueError(f"new_data not valid, can get only int or float and got {type(new_data_2)}")
        
        for shape in self.shapes:
            if shape['id'] == shape_id:
                if shape['type'] == 'circle':
                    self.my_logger.info("shape is circle, updating radius")
-                   shape['radius'] = new_data
+                   shape['radius'] = new_data_1
                    self.save_to_json()
                    return
                elif shape['type'] == 'square':
                    self.my_logger.info("shape is square, updating length")
-                   shape['length'] = new_data
+                   shape['length'] = new_data_1
                    self.save_to_json()
                    return
                elif shape['type'] == 'rectangle':
                    side = input("length or width: ")
                    self.my_logger.info(f"shape is rectangle, updating {side.lower()}")
-                   shape[side.lower()] = new_data
+                   if new_data_1:
+                        shape['length_side'.lower()] = new_data_1
+                   if new_data_2:
+                       shape['width_side'.lower()] = new_data_2
                    self.save_to_json()
                    return
        self.my_logger.warning("didnt find shape id in the DB, didnt update.")
@@ -152,11 +165,11 @@ class ShapeManager:
                     for item in temp_shapes:
                         self.my_logger.info(f"trying to turn shape {item} back in to object style")
                         if item['type'] == 'circle':
-                            self.shapes.append(circle.Circle(item['id'], item['type'], item['radius'], self.my_logger))
+                            self.shapes.append(Circle(item['id'], item['type'], item['radius'], self.my_logger))
                         elif item['type'] == 'square':
-                            self.shapes.append(square.Square(item['id'], item['type'], item['side'], self.my_logger))
+                            self.shapes.append(Square(item['id'], item['type'], item['side'], self.my_logger))
                         elif item['type'] == 'rectandle':
-                            self.shapes.append(rectangle.Rectangle(item['id'], item['type'], item['side_length'], item['side_width'], self.my_logger))
+                            self.shapes.append(Rectangle(item['id'], item['type'], item['side_length'], item['side_width'], self.my_logger))
                 except Exception as e:
                     self.my_logger.exception(f"there was an exeption while reading the json: {e}")
 
