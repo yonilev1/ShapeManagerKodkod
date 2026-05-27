@@ -1,92 +1,7 @@
-2026-05-27 10:11:41,038, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 10:11:41,039, shape_logger, ERROR, type of shape should be int/float and not <class 'str'>
-2026-05-27 10:12:03,258, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 10:12:03,258, shape_logger, INFO, finished in super init
-2026-05-27 11:55:32,962, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 11:56:13,384, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 11:58:35,181, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 11:58:35,182, shape_logger, INFO, in init of ShapeManager
-2026-05-27 11:58:35,182, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 11:58:35,182, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:01:11,668, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:01:11,669, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:01:11,669, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:01:11,669, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:01:16,425, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:01:16,426, shape_logger, INFO, finished in super init
-2026-05-27 12:01:16,426, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:01:16,426, shape_logger, ERROR, type of 2 should be int/float and not <class 'str'>
-2026-05-27 12:02:55,001, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:02:55,001, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:02:55,001, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:02:55,001, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:03:00,448, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:03:00,448, shape_logger, INFO, finished in super init
-2026-05-27 12:03:00,448, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:03:00,448, shape_logger, INFO, finished in init in square
-2026-05-27 12:03:00,448, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:03:52,017, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:03:52,019, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:04:49,034, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:04:49,038, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:04:53,955, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:05:04,475, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:05:43,930, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:05:43,940, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:05:43,940, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:05:43,940, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:05:45,674, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:05:45,674, shape_logger, INFO, finished in super init
-2026-05-27 12:05:45,674, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:05:45,674, shape_logger, INFO, finished in init in square
-2026-05-27 12:05:45,674, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:05:45,674, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:05:45,674, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:06:20,817, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:06:20,817, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:06:20,817, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:06:20,818, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:06:22,903, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:06:22,903, shape_logger, INFO, finished in super init
-2026-05-27 12:06:22,904, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:06:22,904, shape_logger, INFO, finished in init in square
-2026-05-27 12:06:22,904, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:06:22,904, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:06:22,905, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:06:22,905, shape_logger, INFO, in shape manager. in get all shapes to print all shapes
-2026-05-27 12:07:14,080, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:07:14,080, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:07:14,080, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:07:14,080, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:07:15,995, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:07:15,995, shape_logger, INFO, finished in super init
-2026-05-27 12:07:15,995, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:07:15,995, shape_logger, INFO, finished in init in square
-2026-05-27 12:07:15,995, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:07:15,995, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:07:15,996, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:07:15,996, shape_logger, INFO, in shape manager. in get all shapes to print all shapes
-2026-05-27 12:29:31,627, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:29:31,628, shape_logger, INFO, extract json to temp list
-2026-05-27 12:29:31,628, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 12:29:31,628, shape_logger, ERROR, there was an exeption while reading the json: 'shape_type'
+2026-05-27 16:26:58,305, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-27 16:26:58,306, shape_logger, ERROR, there was an exeption while reading the json: Expecting value: line 1 column 1 (char 0)
 Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 156, in load_from_json
-    if item['shape_type'] == 'circle':
-       ~~~~^^^^^^^^^^^^^^
-KeyError: 'shape_type'
-2026-05-27 12:29:31,632, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:29:31,632, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:29:31,632, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:29:34,073, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:29:34,073, shape_logger, INFO, finished in super init
-2026-05-27 12:29:34,073, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:29:34,074, shape_logger, INFO, finished in init in square
-2026-05-27 12:29:34,074, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:30:03,405, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:30:03,406, shape_logger, ERROR, there was an exeption while reading the json: Expecting value: line 1 column 1 (char 0)
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 152, in load_from_json
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 167, in __load_from_json
     temp_shapes = json.load(json_file)
   File "C:\Python313\Lib\json\__init__.py", line 298, in load
     return loads(fp.read(),
@@ -102,201 +17,11 @@ Traceback (most recent call last):
   File "C:\Python313\Lib\json\decoder.py", line 363, in raw_decode
     raise JSONDecodeError("Expecting value", s, err.value) from None
 json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2026-05-27 12:30:03,411, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:30:03,411, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:30:03,411, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:30:05,091, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:30:05,091, shape_logger, INFO, finished in super init
-2026-05-27 12:30:05,092, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:30:05,092, shape_logger, INFO, finished in init in square
-2026-05-27 12:30:05,092, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:30:05,093, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:30:05,093, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:30:05,093, shape_logger, INFO, in shape manager. in get all shapes to print all shapes
-2026-05-27 12:33:33,277, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:33:33,277, shape_logger, INFO, extract json to temp list
-2026-05-27 12:33:33,277, shape_logger, INFO, trying to turn shape id back in to object style
-2026-05-27 12:33:33,277, shape_logger, ERROR, there was an exeption while reading the json: string indices must be integers, not 'str'
+2026-05-27 16:26:58,314, shape_logger, INFO, in init of ShapeManager
+2026-05-27 16:27:05,249, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-27 16:27:05,249, shape_logger, ERROR, there was an exeption while reading the json: Expecting value: line 1 column 1 (char 0)
 Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 156, in load_from_json
-    if item['shape_type'] == 'circle':
-       ~~~~^^^^^^^^^^^^^^
-TypeError: string indices must be integers, not 'str'
-2026-05-27 12:33:33,281, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:33:33,281, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:33:33,281, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:33:35,438, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:33:35,438, shape_logger, INFO, finished in super init
-2026-05-27 12:33:35,438, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:33:35,438, shape_logger, INFO, finished in init in square
-2026-05-27 12:33:35,438, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:33:35,440, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:33:35,440, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:33:35,440, shape_logger, INFO, in shape manager. in get all shapes to print all shapes
-2026-05-27 12:34:26,503, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:34:26,503, shape_logger, INFO, extract json to temp list
-2026-05-27 12:34:26,503, shape_logger, INFO, trying to turn shape id back in to object style
-2026-05-27 12:34:26,503, shape_logger, ERROR, there was an exeption while reading the json: string indices must be integers, not 'str'
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 156, in load_from_json
-    if item['shape_type'] == 'circle':
-       ~~~~^^^^^^^^^^^^^^
-TypeError: string indices must be integers, not 'str'
-2026-05-27 12:34:26,507, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:34:26,507, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:34:26,507, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:34:28,201, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:34:28,201, shape_logger, INFO, finished in super init
-2026-05-27 12:34:28,201, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:34:28,202, shape_logger, INFO, finished in init in square
-2026-05-27 12:34:28,202, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:34:28,202, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:34:28,203, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:34:28,203, shape_logger, INFO, in shape manager. in get all shapes to print all shapes
-2026-05-27 12:34:28,203, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 12:34:28,203, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 12:35:20,572, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:35:20,573, shape_logger, INFO, extract json to temp list
-2026-05-27 12:35:20,573, shape_logger, INFO, trying to turn shape id back in to object style
-2026-05-27 12:35:20,573, shape_logger, ERROR, there was an exeption while reading the json: string indices must be integers, not 'str'
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 156, in load_from_json
-    if item['shape_type'] == 'circle':
-       ~~~~^^^^^^^^^^^^^^
-TypeError: string indices must be integers, not 'str'
-2026-05-27 12:35:20,577, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:35:20,577, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:35:20,577, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:35:26,531, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:35:26,531, shape_logger, INFO, finished in super init
-2026-05-27 12:35:26,531, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:35:26,531, shape_logger, INFO, finished in init in square
-2026-05-27 12:35:26,531, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:35:26,532, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:35:26,532, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:35:26,533, shape_logger, INFO, in shape manager. in get all shapes to print all shapes
-2026-05-27 12:35:26,533, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 12:35:26,533, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 12:35:26,533, shape_logger, INFO, in shape manager. in create shape with shape circle
-2026-05-27 12:35:26,533, shape_logger, INFO, the shape wanted is circle, sending to create in instans
-2026-05-27 12:35:30,262, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:35:30,262, shape_logger, INFO, finished in super init
-2026-05-27 12:35:30,262, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:35:30,262, shape_logger, INFO, finished in init in circle
-2026-05-27 12:35:30,262, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:35:30,263, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:35:30,263, shape_logger, INFO, in function to_dict to get dict of circle
-2026-05-27 12:35:30,264, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:35:30,264, shape_logger, INFO, in shape manager. in get all shapes to print all shapes
-2026-05-27 12:35:30,264, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 12:35:30,264, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 12:35:30,264, shape_logger, INFO, in function get_area to get area of circle
-2026-05-27 12:35:30,267, shape_logger, INFO, in function get_perimeter to get perimeter of circle
-2026-05-27 12:35:30,268, shape_logger, INFO, in shape manager. in create shape with shape rectangle
-2026-05-27 12:35:30,268, shape_logger, INFO, the shape wanted is rectangle, sending to create in instans
-2026-05-27 12:35:34,597, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:35:34,598, shape_logger, INFO, finished in super init
-2026-05-27 12:35:34,598, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:35:34,598, shape_logger, INFO, finished in init in rectangle
-2026-05-27 12:35:34,598, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:35:34,599, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:35:34,599, shape_logger, INFO, in function to_dict to get dict of circle
-2026-05-27 12:35:34,599, shape_logger, INFO, in function to_dict to get dict of rectangle
-2026-05-27 12:35:34,600, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:35:34,600, shape_logger, INFO, in shape manager. in get all shapes to print all shapes
-2026-05-27 12:35:34,600, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 12:35:34,600, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 12:35:34,600, shape_logger, INFO, in function get_area to get area of circle
-2026-05-27 12:35:34,600, shape_logger, INFO, in function get_perimeter to get perimeter of circle
-2026-05-27 12:35:34,600, shape_logger, INFO, in function get_area to get area of rectangle
-2026-05-27 12:35:34,600, shape_logger, INFO, in function get_perimeter to get perimeter of rectangle
-2026-05-27 12:40:34,463, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:40:34,463, shape_logger, ERROR, there was an exeption while reading the json: Extra data: line 5 column 2 (char 52)
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 152, in load_from_json
-    temp_shapes = json.load(json_file)
-  File "C:\Python313\Lib\json\__init__.py", line 298, in load
-    return loads(fp.read(),
-        cls=cls, object_hook=object_hook,
-        parse_float=parse_float, parse_int=parse_int,
-        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
-  File "C:\Python313\Lib\json\__init__.py", line 352, in loads
-    return _default_decoder.decode(s)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^
-  File "C:\Python313\Lib\json\decoder.py", line 348, in decode
-    raise JSONDecodeError("Extra data", s, end)
-json.decoder.JSONDecodeError: Extra data: line 5 column 2 (char 52)
-2026-05-27 12:40:34,468, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:40:34,468, shape_logger, INFO, in shape manager. in get all shapes to print all shapes
-2026-05-27 12:40:43,074, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:40:43,074, shape_logger, ERROR, there was an exeption while reading the json: Extra data: line 5 column 2 (char 52)
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 152, in load_from_json
-    temp_shapes = json.load(json_file)
-  File "C:\Python313\Lib\json\__init__.py", line 298, in load
-    return loads(fp.read(),
-        cls=cls, object_hook=object_hook,
-        parse_float=parse_float, parse_int=parse_int,
-        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
-  File "C:\Python313\Lib\json\__init__.py", line 352, in loads
-    return _default_decoder.decode(s)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^
-  File "C:\Python313\Lib\json\decoder.py", line 348, in decode
-    raise JSONDecodeError("Extra data", s, end)
-json.decoder.JSONDecodeError: Extra data: line 5 column 2 (char 52)
-2026-05-27 12:40:43,079, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:40:43,079, shape_logger, INFO, in shape manager. in get all shapes to print all shapes
-2026-05-27 12:42:58,936, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:42:58,936, shape_logger, ERROR, there was an exeption while reading the json: Extra data: line 5 column 2 (char 52)
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 152, in load_from_json
-    temp_shapes = json.load(json_file)
-  File "C:\Python313\Lib\json\__init__.py", line 298, in load
-    return loads(fp.read(),
-        cls=cls, object_hook=object_hook,
-        parse_float=parse_float, parse_int=parse_int,
-        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
-  File "C:\Python313\Lib\json\__init__.py", line 352, in loads
-    return _default_decoder.decode(s)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^
-  File "C:\Python313\Lib\json\decoder.py", line 348, in decode
-    raise JSONDecodeError("Extra data", s, end)
-json.decoder.JSONDecodeError: Extra data: line 5 column 2 (char 52)
-2026-05-27 12:42:58,941, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:42:58,941, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 0
-2026-05-27 12:43:16,276, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:43:16,276, shape_logger, ERROR, there was an exeption while reading the json: Extra data: line 5 column 2 (char 52)
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 152, in load_from_json
-    temp_shapes = json.load(json_file)
-  File "C:\Python313\Lib\json\__init__.py", line 298, in load
-    return loads(fp.read(),
-        cls=cls, object_hook=object_hook,
-        parse_float=parse_float, parse_int=parse_int,
-        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
-  File "C:\Python313\Lib\json\__init__.py", line 352, in loads
-    return _default_decoder.decode(s)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^
-  File "C:\Python313\Lib\json\decoder.py", line 348, in decode
-    raise JSONDecodeError("Extra data", s, end)
-json.decoder.JSONDecodeError: Extra data: line 5 column 2 (char 52)
-2026-05-27 12:43:16,281, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:43:16,281, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 0
-2026-05-27 12:45:52,788, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:45:52,789, shape_logger, INFO, extract json to temp list
-2026-05-27 12:45:52,789, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:45:52,789, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:45:52,789, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:45:56,103, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:45:56,103, shape_logger, INFO, finished in super init
-2026-05-27 12:45:56,103, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:45:56,103, shape_logger, INFO, finished in init in square
-2026-05-27 12:45:56,103, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:45:56,104, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:46:21,154, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:46:21,154, shape_logger, ERROR, there was an exeption while reading the json: Expecting value: line 1 column 1 (char 0)
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 154, in load_from_json
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 167, in __load_from_json
     temp_shapes = json.load(json_file)
   File "C:\Python313\Lib\json\__init__.py", line 298, in load
     return loads(fp.read(),
@@ -312,310 +37,128 @@ Traceback (most recent call last):
   File "C:\Python313\Lib\json\decoder.py", line 363, in raw_decode
     raise JSONDecodeError("Expecting value", s, err.value) from None
 json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2026-05-27 12:46:21,159, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:46:21,159, shape_logger, INFO, in shape manager. in create shape with shape square
-2026-05-27 12:46:21,159, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 12:46:23,458, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:46:23,458, shape_logger, INFO, finished in super init
-2026-05-27 12:46:23,458, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:46:23,458, shape_logger, INFO, finished in init in square
-2026-05-27 12:46:23,458, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:46:23,459, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:46:23,460, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:46:23,460, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 1
-2026-05-27 12:46:23,460, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 12:46:23,460, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 12:46:23,461, shape_logger, INFO, in shape manager. in create shape with shape circle
-2026-05-27 12:46:23,461, shape_logger, INFO, the shape wanted is circle, sending to create in instans
-2026-05-27 12:46:26,353, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:46:26,354, shape_logger, INFO, finished in super init
-2026-05-27 12:46:26,354, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:46:26,354, shape_logger, INFO, finished in init in circle
-2026-05-27 12:46:26,354, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:46:26,354, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:46:26,355, shape_logger, INFO, in function to_dict to get dict of circle
-2026-05-27 12:46:26,355, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:46:26,355, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 2
-2026-05-27 12:46:26,355, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 12:46:26,355, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 12:46:26,355, shape_logger, INFO, in function get_area to get area of circle
-2026-05-27 12:46:26,356, shape_logger, INFO, in function get_perimeter to get perimeter of circle
-2026-05-27 12:46:26,356, shape_logger, INFO, in shape manager. in create shape with shape rectangle
-2026-05-27 12:46:26,356, shape_logger, INFO, the shape wanted is rectangle, sending to create in instans
-2026-05-27 12:46:27,944, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 12:46:27,945, shape_logger, INFO, finished in super init
-2026-05-27 12:46:27,945, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 12:46:27,945, shape_logger, INFO, finished in init in rectangle
-2026-05-27 12:46:27,945, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 12:46:27,946, shape_logger, INFO, in function to_dict to get dict of square
-2026-05-27 12:46:27,946, shape_logger, INFO, in function to_dict to get dict of circle
-2026-05-27 12:46:27,946, shape_logger, INFO, in function to_dict to get dict of rectangle
-2026-05-27 12:46:27,947, shape_logger, INFO, shape created successfully, updated json
-2026-05-27 12:46:27,947, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 3
-2026-05-27 12:46:27,947, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 12:46:27,947, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 12:46:27,947, shape_logger, INFO, in function get_area to get area of circle
-2026-05-27 12:46:27,947, shape_logger, INFO, in function get_perimeter to get perimeter of circle
-2026-05-27 12:46:27,947, shape_logger, INFO, in function get_area to get area of rectangle
-2026-05-27 12:46:27,947, shape_logger, INFO, in function get_perimeter to get perimeter of rectangle
-2026-05-27 12:46:48,947, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:46:48,947, shape_logger, INFO, extract json to temp list
-2026-05-27 12:46:48,947, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 12:46:48,947, shape_logger, ERROR, there was an exeption while reading the json: 'shape_type'
+2026-05-27 16:27:05,254, shape_logger, INFO, in init of ShapeManager
+2026-05-27 16:28:48,678, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-27 16:28:48,679, shape_logger, ERROR, there was an exeption while reading the json: Expecting value: line 1 column 1 (char 0)
 Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 158, in load_from_json
-    if item['shape_type'] == 'circle':
-       ~~~~^^^^^^^^^^^^^^
-KeyError: 'shape_type'
-2026-05-27 12:46:48,950, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:46:48,951, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 0
-2026-05-27 12:48:30,681, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:48:30,681, shape_logger, INFO, extract json to temp list
-2026-05-27 12:48:30,681, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 12:48:30,681, shape_logger, ERROR, there was an exeption while reading the json: 'shape_type'
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 167, in __load_from_json
+    temp_shapes = json.load(json_file)
+  File "C:\Python313\Lib\json\__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Python313\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-05-27 16:28:48,686, shape_logger, INFO, in init of ShapeManager
+2026-05-27 16:29:38,011, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-27 16:29:38,012, shape_logger, ERROR, there was an exeption while reading the json: Expecting value: line 1 column 1 (char 0)
 Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 158, in load_from_json
-    if item['shape_type'] == 'circle':
-       ~~~~^^^^^^^^^^^^^^
-KeyError: 'shape_type'
-2026-05-27 12:48:30,685, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:48:30,685, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 0
-2026-05-27 12:49:12,316, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:49:12,316, shape_logger, INFO, extract json to temp list
-2026-05-27 12:49:12,316, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 12:49:12,316, shape_logger, ERROR, there was an exeption while reading the json: 'shape_id'
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 167, in __load_from_json
+    temp_shapes = json.load(json_file)
+  File "C:\Python313\Lib\json\__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Python313\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-05-27 16:29:38,019, shape_logger, INFO, in init of ShapeManager
+2026-05-27 16:31:18,428, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-27 16:31:18,429, shape_logger, ERROR, there was an exeption while reading the json: Expecting value: line 1 column 1 (char 0)
 Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 161, in load_from_json
-    self.shapes.append(square.Square((item['shape_id'], item['type'], item['side'], self.my_logger)))
-                                      ~~~~^^^^^^^^^^^^
-KeyError: 'shape_id'
-2026-05-27 12:49:12,321, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:49:12,321, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 0
-2026-05-27 12:50:07,029, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 12:50:07,030, shape_logger, INFO, extract json to temp list
-2026-05-27 12:50:07,030, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 12:50:07,030, shape_logger, ERROR, there was an exeption while reading the json: Square.__init__() missing 3 required positional arguments: 'shape_type', 'length', and 'logger'
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 161, in load_from_json
-    self.shapes.append(square.Square((item['id'], item['type'], item['side'], self.my_logger)))
-                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: Square.__init__() missing 3 required positional arguments: 'shape_type', 'length', and 'logger'
-2026-05-27 12:50:07,036, shape_logger, INFO, in init of ShapeManager
-2026-05-27 12:50:07,036, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 0
-2026-05-27 13:02:14,041, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 13:02:14,041, shape_logger, INFO, extract json to temp list
-2026-05-27 13:02:14,041, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 13:02:14,041, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 13:02:14,041, shape_logger, INFO, finished in super init
-2026-05-27 13:02:14,041, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 13:02:14,041, shape_logger, INFO, finished in init in square
-2026-05-27 13:02:14,041, shape_logger, INFO, trying to turn shape {'if': 2, 'type': 'circle', 'radius': 3} back in to object style
-2026-05-27 13:02:14,041, shape_logger, ERROR, there was an exeption while reading the json: 'id'
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 159, in load_from_json
-    self.shapes.append(circle.Circle(item['id'], item['type'], item['redius'], self.my_logger))
-                                     ~~~~^^^^^^
-KeyError: 'id'
-2026-05-27 13:02:14,046, shape_logger, INFO, in init of ShapeManager
-2026-05-27 13:02:14,046, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 1
-2026-05-27 13:02:14,046, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 13:02:14,046, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 13:03:49,051, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 13:03:49,051, shape_logger, INFO, extract json to temp list, there are 3 shapes
-2026-05-27 13:03:49,051, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 13:03:49,051, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 13:03:49,051, shape_logger, INFO, finished in super init
-2026-05-27 13:03:49,051, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 13:03:49,051, shape_logger, INFO, finished in init in square
-2026-05-27 13:03:49,051, shape_logger, INFO, trying to turn shape {'if': 2, 'type': 'circle', 'radius': 3} back in to object style
-2026-05-27 13:03:49,051, shape_logger, ERROR, there was an exeption while reading the json: 'id'
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 159, in load_from_json
-    self.shapes.append(circle.Circle(item['id'], item['type'], item['redius'], self.my_logger))
-                                     ~~~~^^^^^^
-KeyError: 'id'
-2026-05-27 13:03:49,055, shape_logger, INFO, in init of ShapeManager
-2026-05-27 13:03:49,055, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 1
-2026-05-27 13:03:49,055, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 13:03:49,055, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 14:31:25,211, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 14:31:25,211, shape_logger, INFO, extract json to temp list, there are 3 shapes
-2026-05-27 14:31:25,211, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 14:31:25,211, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
-2026-05-27 14:31:25,211, shape_logger, INFO, finished in super init
-2026-05-27 14:31:25,211, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 14:31:25,211, shape_logger, INFO, finished in init in square
-2026-05-27 14:31:25,211, shape_logger, INFO, trying to turn shape {'if': 2, 'type': 'circle', 'radius': 3} back in to object style
-2026-05-27 14:31:25,211, shape_logger, ERROR, there was an exeption while reading the json: 'id'
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 159, in load_from_json
-    self.shapes.append(circle.Circle(item['id'], item['type'], item['redius'], self.my_logger))
-                                     ~~~~^^^^^^
-KeyError: 'id'
-2026-05-27 14:31:25,215, shape_logger, INFO, in init of ShapeManager
-2026-05-27 14:31:25,215, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 1
-2026-05-27 14:31:25,215, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 14:31:25,215, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 14:32:28,304, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 14:32:28,305, shape_logger, INFO, extract json to temp list, there are 3 shapes
-2026-05-27 14:32:28,305, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 14:32:28,305, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: square, logger
-2026-05-27 14:32:28,305, shape_logger, INFO, finished in super init
-2026-05-27 14:32:28,305, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 14:32:28,305, shape_logger, INFO, finished in init in square
-2026-05-27 14:32:28,305, shape_logger, INFO, trying to turn shape {'if': 2, 'type': 'circle', 'radius': 3} back in to object style
-2026-05-27 14:32:28,305, shape_logger, ERROR, there was an exeption while reading the json: 'id'
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 159, in load_from_json
-    self.shapes.append(circle.Circle(item['id'], item['type'], item['redius'], self.my_logger))
-                                     ~~~~^^^^^^
-KeyError: 'id'
-2026-05-27 14:32:28,311, shape_logger, INFO, in init of ShapeManager
-2026-05-27 14:32:28,312, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 1
-2026-05-27 14:32:28,312, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 14:32:28,312, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 14:33:16,743, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 14:33:16,758, shape_logger, INFO, extract json to temp list, there are 3 shapes
-2026-05-27 14:33:16,758, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 14:33:16,758, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: square, logger
-2026-05-27 14:33:16,758, shape_logger, INFO, finished in super init
-2026-05-27 14:33:16,758, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 14:33:16,758, shape_logger, INFO, finished in init in square
-2026-05-27 14:33:16,759, shape_logger, INFO, trying to turn shape {'id': 2, 'type': 'circle', 'radius': 3} back in to object style
-2026-05-27 14:33:16,759, shape_logger, ERROR, there was an exeption while reading the json: 'redius'
-Traceback (most recent call last):
-  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 159, in load_from_json
-    self.shapes.append(circle.Circle(item['id'], item['type'], item['redius'], self.my_logger))
-                                                               ~~~~^^^^^^^^^^
-KeyError: 'redius'
-2026-05-27 14:33:16,768, shape_logger, INFO, in init of ShapeManager
-2026-05-27 14:33:16,768, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 1
-2026-05-27 14:33:16,768, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 14:33:16,769, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 14:33:36,395, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 14:33:36,395, shape_logger, INFO, extract json to temp list, there are 3 shapes
-2026-05-27 14:33:36,395, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 14:33:36,395, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: square, logger
-2026-05-27 14:33:36,395, shape_logger, INFO, finished in super init
-2026-05-27 14:33:36,395, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 14:33:36,395, shape_logger, INFO, finished in init in square
-2026-05-27 14:33:36,395, shape_logger, INFO, trying to turn shape {'id': 2, 'type': 'circle', 'radius': 3} back in to object style
-2026-05-27 14:33:36,395, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: circle, logger
-2026-05-27 14:33:36,395, shape_logger, INFO, finished in super init
-2026-05-27 14:33:36,395, shape_logger, INFO, sent shape_id, shape_type, logger to super() in base class
-2026-05-27 14:33:36,395, shape_logger, INFO, finished in init in circle
-2026-05-27 14:33:36,395, shape_logger, INFO, trying to turn shape {'id': 3, 'type': 'rectangle', 'side_length': 4, 'side_width': 5} back in to object style
-2026-05-27 14:33:36,395, shape_logger, INFO, in init of ShapeManager
-2026-05-27 14:33:36,395, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 2
-2026-05-27 14:33:36,395, shape_logger, INFO, in function get_area to get area of square
-2026-05-27 14:33:36,395, shape_logger, INFO, in function get_perimeter to get perimeter of square
-2026-05-27 14:33:36,395, shape_logger, INFO, in function get_area to get area of circle
-2026-05-27 14:33:36,396, shape_logger, INFO, in function get_perimeter to get perimeter of circle
-2026-05-27 15:49:15,628, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 15:49:15,631, shape_logger, INFO, extract json to temp list, there are 3 shapes
-2026-05-27 15:49:15,631, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'square', 'side': 2} back in to object style
-2026-05-27 15:49:15,631, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: square, logger
-2026-05-27 15:49:15,631, shape_logger, INFO, finished in super init
-2026-05-27 15:49:15,631, shape_logger, INFO, sent shape_id: 1, shape_type: square, logger to super() in base class
-2026-05-27 15:49:15,631, shape_logger, INFO, finished in init in square. shape_id: 1
-2026-05-27 15:49:15,631, shape_logger, INFO, trying to turn shape {'id': 2, 'type': 'circle', 'radius': 3} back in to object style
-2026-05-27 15:49:15,631, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: circle, logger
-2026-05-27 15:49:15,631, shape_logger, INFO, finished in super init
-2026-05-27 15:49:15,631, shape_logger, INFO, sent shape_id: 2, shape_type: circle, logger to super() in base class
-2026-05-27 15:49:15,631, shape_logger, INFO, finished in init in circle. shape_id: 2
-2026-05-27 15:49:15,631, shape_logger, INFO, trying to turn shape {'id': 3, 'type': 'rectangle', 'side_length': 4, 'side_width': 5} back in to object style
-2026-05-27 15:49:15,632, shape_logger, INFO, in init of ShapeManager
-2026-05-27 15:49:31,369, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 15:49:31,369, shape_logger, INFO, extract json to temp list, there are 0 shapes
-2026-05-27 15:49:31,369, shape_logger, INFO, in init of ShapeManager
-2026-05-27 15:49:38,979, shape_logger, INFO, in shape manager. in create shape with shape: circle, id: 1
-2026-05-27 15:49:38,979, shape_logger, INFO, the shape wanted is circle, sending to create in instans
-2026-05-27 15:49:38,979, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, logger
-2026-05-27 15:49:38,980, shape_logger, INFO, finished in super init
-2026-05-27 15:49:38,980, shape_logger, INFO, sent shape_id: 1, shape_type: circle, logger to super() in base class
-2026-05-27 15:49:38,980, shape_logger, INFO, finished in init in circle. shape_id: 1
-2026-05-27 15:49:38,980, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 15:49:38,980, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 1
-2026-05-27 15:49:38,981, shape_logger, INFO, shape circle with id <built-in function id> created successfully, updated json
-2026-05-27 15:50:31,219, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 15:50:31,220, shape_logger, INFO, extract json to temp list, there are 0 shapes
-2026-05-27 15:50:31,220, shape_logger, INFO, in init of ShapeManager
-2026-05-27 15:50:44,039, shape_logger, INFO, in shape manager. in create shape with shape: circle, id: 1
-2026-05-27 15:50:44,039, shape_logger, INFO, the shape wanted is circle, sending to create in instans
-2026-05-27 15:50:44,039, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, logger
-2026-05-27 15:50:44,039, shape_logger, INFO, finished in super init
-2026-05-27 15:50:44,039, shape_logger, INFO, sent shape_id: 1, shape_type: circle, logger to super() in base class
-2026-05-27 15:50:44,040, shape_logger, INFO, finished in init in circle. shape_id: 1
-2026-05-27 15:50:44,040, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 15:50:44,041, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 1
-2026-05-27 15:50:44,041, shape_logger, INFO, shape circle with id <built-in function id> created successfully, updated json
-2026-05-27 15:50:54,191, shape_logger, INFO, in shape manager. in create shape with shape: square, id: 2
-2026-05-27 15:50:54,192, shape_logger, INFO, the shape wanted is square, sending to create in instans
-2026-05-27 15:50:54,192, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: square, logger
-2026-05-27 15:50:54,192, shape_logger, INFO, finished in super init
-2026-05-27 15:50:54,192, shape_logger, INFO, sent shape_id: 2, shape_type: square, logger to super() in base class
-2026-05-27 15:50:54,192, shape_logger, INFO, finished in init in square. shape_id: 2
-2026-05-27 15:50:54,192, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 15:50:54,193, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 1
-2026-05-27 15:50:54,193, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 2
-2026-05-27 15:50:54,194, shape_logger, INFO, shape square with id <built-in function id> created successfully, updated json
-2026-05-27 15:52:21,022, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 15:52:21,022, shape_logger, INFO, extract json to temp list, there are 2 shapes
-2026-05-27 15:52:21,022, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'circle', 'radius': 3} back in to object style
-2026-05-27 15:52:21,022, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, logger
-2026-05-27 15:52:21,022, shape_logger, INFO, finished in super init
-2026-05-27 15:52:21,022, shape_logger, INFO, sent shape_id: 1, shape_type: circle, logger to super() in base class
-2026-05-27 15:52:21,022, shape_logger, INFO, finished in init in circle. shape_id: 1
-2026-05-27 15:52:21,022, shape_logger, INFO, trying to turn shape {'id': 2, 'type': 'square', 'side': 3} back in to object style
-2026-05-27 15:52:21,022, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: square, logger
-2026-05-27 15:52:21,022, shape_logger, INFO, finished in super init
-2026-05-27 15:52:21,022, shape_logger, INFO, sent shape_id: 2, shape_type: square, logger to super() in base class
-2026-05-27 15:52:21,022, shape_logger, INFO, finished in init in square. shape_id: 2
-2026-05-27 15:52:21,022, shape_logger, INFO, in init of ShapeManager
-2026-05-27 15:52:23,976, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 2
-2026-05-27 15:52:23,976, shape_logger, INFO, in function get_area to get area of circle. shape_id: 1
-2026-05-27 15:52:23,980, shape_logger, INFO, in function get_perimeter to get perimeter of circle. shape_id: 1
-2026-05-27 15:52:23,980, shape_logger, INFO, in function get_area to get area of square. shape_id: 2
-2026-05-27 15:52:23,980, shape_logger, INFO, in function get_perimeter to get perimeter of square. shape_id: 2
-2026-05-27 15:52:56,236, shape_logger, INFO, in shape manager. trying to update the shape
-2026-05-27 15:52:56,237, shape_logger, INFO, shape is circle, updating radius
-2026-05-27 15:52:56,237, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 15:52:56,237, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 1
-2026-05-27 15:52:56,238, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 2
-2026-05-27 15:52:56,238, shape_logger, INFO, apdated the shape circle with id 1, and save to json
-2026-05-27 15:53:01,801, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 2
-2026-05-27 15:53:01,801, shape_logger, INFO, in function get_area to get area of circle. shape_id: 1
-2026-05-27 15:53:01,801, shape_logger, INFO, in function get_perimeter to get perimeter of circle. shape_id: 1
-2026-05-27 15:53:01,802, shape_logger, INFO, in function get_area to get area of square. shape_id: 2
-2026-05-27 15:53:01,802, shape_logger, INFO, in function get_perimeter to get perimeter of square. shape_id: 2
-2026-05-27 15:53:09,352, shape_logger, INFO, in shape manager. trying to delete shape by id
-2026-05-27 15:53:09,353, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
-2026-05-27 15:53:09,353, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 2
-2026-05-27 15:53:09,354, shape_logger, INFO, deleted the shape circle with id 1, and save to json
-2026-05-27 15:53:10,812, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 1
-2026-05-27 15:53:10,813, shape_logger, INFO, in function get_area to get area of square. shape_id: 2
-2026-05-27 15:53:10,813, shape_logger, INFO, in function get_perimeter to get perimeter of square. shape_id: 2
-2026-05-27 15:54:18,348, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 15:54:18,348, shape_logger, INFO, extract json to temp list, there are 1 shapes
-2026-05-27 15:54:18,348, shape_logger, INFO, trying to turn shape {'id': 2, 'type': 'square', 'side': 3} back in to object style
-2026-05-27 15:54:18,348, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: square, logger
-2026-05-27 15:54:18,348, shape_logger, INFO, finished in super init
-2026-05-27 15:54:18,348, shape_logger, INFO, sent shape_id: 2, shape_type: square, logger to super() in base class
-2026-05-27 15:54:18,348, shape_logger, INFO, finished in init in square. shape_id: 2
-2026-05-27 15:54:18,348, shape_logger, INFO, in init of ShapeManager
-2026-05-27 15:54:39,035, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 15:54:39,035, shape_logger, INFO, extract json to temp list, there are 1 shapes
-2026-05-27 15:54:39,035, shape_logger, INFO, trying to turn shape {'id': 2, 'type': 'square', 'side': 3} back in to object style
-2026-05-27 15:54:39,035, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: square, logger
-2026-05-27 15:54:39,035, shape_logger, INFO, finished in super init
-2026-05-27 15:54:39,035, shape_logger, INFO, sent shape_id: 2, shape_type: square, logger to super() in base class
-2026-05-27 15:54:39,035, shape_logger, INFO, finished in init in square. shape_id: 2
-2026-05-27 15:54:39,035, shape_logger, INFO, in init of ShapeManager
-2026-05-27 15:54:50,395, shape_logger, INFO, in shape manager. trying to load the shapes from json
-2026-05-27 15:54:50,396, shape_logger, INFO, extract json to temp list, there are 1 shapes
-2026-05-27 15:54:50,396, shape_logger, INFO, trying to turn shape {'id': 2, 'type': 'square', 'side': 3} back in to object style
-2026-05-27 15:54:50,396, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: square, logger
-2026-05-27 15:54:50,396, shape_logger, INFO, finished in super init
-2026-05-27 15:54:50,396, shape_logger, INFO, sent shape_id: 2, shape_type: square, logger to super() in base class
-2026-05-27 15:54:50,396, shape_logger, INFO, finished in init in square. shape_id: 2
-2026-05-27 15:54:50,396, shape_logger, INFO, in init of ShapeManager
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 167, in __load_from_json
+    temp_shapes = json.load(json_file)
+  File "C:\Python313\Lib\json\__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Python313\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-05-27 16:31:18,433, shape_logger, INFO, in init of ShapeManager
+2026-05-27 16:31:47,846, shape_logger, INFO, in shape manager. in create shape with shape: circle, id: 1
+2026-05-27 16:31:47,847, shape_logger, INFO, the shape wanted is circle, sending to create in instans
+2026-05-27 16:31:47,847, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, logger
+2026-05-27 16:31:47,847, shape_logger, INFO, finished in super init
+2026-05-27 16:31:47,847, shape_logger, INFO, sent shape_id: 1, shape_type: circle, logger to super() in base class
+2026-05-27 16:31:47,847, shape_logger, INFO, finished in init in circle. shape_id: 1
+2026-05-27 16:31:47,847, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-27 16:31:47,848, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 1
+2026-05-27 16:31:47,848, shape_logger, INFO, shape circle with id <built-in function id> created successfully, updated json
+2026-05-27 16:32:02,414, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 1
+2026-05-27 16:32:02,415, shape_logger, INFO, in function get_area to get area of circle. shape_id: 1
+2026-05-27 16:32:02,415, shape_logger, INFO, in function get_perimeter to get perimeter of circle. shape_id: 1
+2026-05-27 16:32:17,613, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-27 16:32:17,613, shape_logger, WARNING, didnt find shape id in the DB, didnt update.
+2026-05-27 16:40:19,782, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-27 16:40:19,793, shape_logger, INFO, extract json to temp list, there are 1 shapes
+2026-05-27 16:40:19,793, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'circle', 'radius': 5} back in to object style
+2026-05-27 16:40:19,794, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, logger
+2026-05-27 16:40:19,794, shape_logger, INFO, finished in super init
+2026-05-27 16:40:19,794, shape_logger, INFO, sent shape_id: 1, shape_type: circle, logger to super() in base class
+2026-05-27 16:40:19,794, shape_logger, INFO, finished in init in circle. shape_id: 1
+2026-05-27 16:40:19,794, shape_logger, INFO, in init of ShapeManager
+2026-05-27 16:40:33,671, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-27 16:40:33,671, shape_logger, WARNING, didnt find shape id in the DB, didnt update.
+2026-05-27 16:50:04,526, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-27 16:50:04,526, shape_logger, INFO, extract json to temp list, there are 1 shapes
+2026-05-27 16:50:04,526, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'circle', 'radius': 5} back in to object style
+2026-05-27 16:50:04,526, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, logger
+2026-05-27 16:50:04,526, shape_logger, INFO, finished in super init
+2026-05-27 16:50:04,527, shape_logger, INFO, sent shape_id: 1, shape_type: circle, logger to super() in base class
+2026-05-27 16:50:04,527, shape_logger, INFO, finished in init in circle. shape_id: 1
+2026-05-27 16:50:04,527, shape_logger, INFO, in init of ShapeManager
+2026-05-27 16:50:11,477, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-27 16:50:11,478, shape_logger, WARNING, didnt find shape id in the DB, didnt update.
+2026-05-27 16:50:48,698, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-27 16:50:48,698, shape_logger, INFO, extract json to temp list, there are 1 shapes
+2026-05-27 16:50:48,698, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'circle', 'radius': 5} back in to object style
+2026-05-27 16:50:48,698, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, logger
+2026-05-27 16:50:48,698, shape_logger, INFO, finished in super init
+2026-05-27 16:50:48,698, shape_logger, INFO, sent shape_id: 1, shape_type: circle, logger to super() in base class
+2026-05-27 16:50:48,698, shape_logger, INFO, finished in init in circle. shape_id: 1
+2026-05-27 16:50:48,698, shape_logger, INFO, in init of ShapeManager
+2026-05-27 16:51:25,653, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-27 16:51:25,653, shape_logger, INFO, extract json to temp list, there are 1 shapes
+2026-05-27 16:51:25,653, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'circle', 'radius': 5} back in to object style
+2026-05-27 16:51:25,653, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, logger
+2026-05-27 16:51:25,653, shape_logger, INFO, finished in super init
+2026-05-27 16:51:25,653, shape_logger, INFO, sent shape_id: 1, shape_type: circle, logger to super() in base class
+2026-05-27 16:51:25,653, shape_logger, INFO, finished in init in circle. shape_id: 1
+2026-05-27 16:51:25,654, shape_logger, INFO, in init of ShapeManager
+2026-05-27 16:51:29,354, shape_logger, INFO, in shape manager. trying to delete shape by id
+2026-05-27 16:51:29,354, shape_logger, WARNING, didnt find shape id in the DB, didnt delete.
+2026-05-27 16:52:17,078, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-27 16:52:17,079, shape_logger, INFO, extract json to temp list, there are 1 shapes
+2026-05-27 16:52:17,079, shape_logger, INFO, trying to turn shape {'id': 1, 'type': 'circle', 'radius': 5} back in to object style
+2026-05-27 16:52:17,079, shape_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, logger
+2026-05-27 16:52:17,079, shape_logger, INFO, finished in super init
+2026-05-27 16:52:17,079, shape_logger, INFO, sent shape_id: 1, shape_type: circle, logger to super() in base class
+2026-05-27 16:52:17,079, shape_logger, INFO, finished in init in circle. shape_id: 1
+2026-05-27 16:52:17,079, shape_logger, INFO, in init of ShapeManager
+2026-05-27 16:52:24,148, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-27 16:52:24,149, shape_logger, WARNING, didnt find shape id 5 in the DB, didnt update.
+2026-05-27 16:52:36,122, shape_logger, INFO, in shape manager. trying to delete shape by id
+2026-05-27 16:52:36,122, shape_logger, WARNING, didnt find shape id 5 in the DB, didnt delete.

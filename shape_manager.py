@@ -29,7 +29,7 @@ class ShapeManager:
        Returns:
         int: id of created shape
        """
-       shape_id = len(self.shapes) + 1
+       shape_id = self.__calculate_id()
        self.my_logger.info(f"in shape manager. in create shape with shape: {shape}, id: {shape_id}")
 
        if not isinstance(shape, str):
@@ -53,7 +53,7 @@ class ShapeManager:
         
        self.shapes.append(my_shape)
        self.__save_to_json()
-       self.my_logger.info(f"shape {shape} with id {id} created successfully, updated json")
+       self.my_logger.info(f"shape {shape} with id {shape_id} created successfully, updated json")
        return shape_id
             
  
@@ -83,18 +83,18 @@ class ShapeManager:
        """
        self.my_logger.info("in shape manager. trying to update the shape")
        
-       if not isinstance(shape_id, (int,float)):
+       if not isinstance(shape_id, int):
            self.my_logger.error(f"shape id not valid, can get only int or float and got {type(shape_id)}")
            raise ValueError(f"shape id not valid, can get only int or float and got {type(shape_id)}")
        
-       if not isinstance(new_data_1, (int,float)):
+       if not isinstance(new_data_1, int):
            self.my_logger.error(f"new_data not valid, can get only int or float and got {type(new_data_1)}")
            raise ValueError(f"new_data not valid, can get only int or float and got {type(new_data_1)}")
        
-       if not isinstance(new_data_1, (int,float)):
+       if new_data_2 and not isinstance(new_data_2, int):
            self.my_logger.error(f"new_data not valid, can get only int or float and got {type(new_data_2)}")
            raise ValueError(f"new_data not valid, can get only int or float and got {type(new_data_2)}")
-       
+              
        for shape in self.shapes:
            if shape.shape_id == shape_id:
                if shape.shape_type == 'circle':
@@ -102,24 +102,23 @@ class ShapeManager:
                    shape.radius = new_data_1
                    self.__save_to_json()
                    self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
-                   return
+                   return True
                elif shape.shape_type == 'square':
                    self.my_logger.info("shape is square, updating length")
                    shape.length = new_data_1
                    self.__save_to_json()
                    self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
-                   return
+                   return True
                elif shape.shape_type == 'rectangle':
-                   side = input("length or width: ")
-                   self.my_logger.info(f"shape is rectangle, updating {side.lower()}")
                    if new_data_1:
                         shape.length = new_data_1
                    if new_data_2:
                        shape.width = new_data_2
                    self.__save_to_json()
                    self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
-                   return
-       self.my_logger.warning("didnt find shape id in the DB, didnt update.")
+                   return True
+       self.my_logger.warning(f"didnt find shape id {shape_id} in the DB, didnt update.")
+       raise KeyError(f"the key {shape_id} does not exist.")
 
  
    def delete_shape(self, shape_id):
@@ -129,14 +128,16 @@ class ShapeManager:
        Args:
             shape_id(int): id of shape
        """
-       self.my_logger.info("in shape manager. trying to delete shape by id")
+       self.my_logger.info("in shape manager. trying to delete shape by id")           
+       
        for shape in self.shapes:
            if shape.shape_id == shape_id:
                self.shapes.remove(shape)
                self.__save_to_json()
                self.my_logger.info(f"deleted the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
-               return
-       self.my_logger.warning("didnt find shape id in the DB, didnt delete.")
+               return True
+       self.my_logger.warning(f"didnt find shape id {shape_id} in the DB, didnt delete.")
+       raise KeyError(f"the key {shape_id} does not exist.")
 
  
    def __save_to_json(self):
@@ -172,13 +173,38 @@ class ShapeManager:
                             self.shapes.append(Circle(item['id'], item['type'], item['radius'], self.my_logger))
                         elif item['type'] == 'square':
                             self.shapes.append(Square(item['id'], item['type'], item['side'], self.my_logger))
-                        elif item['type'] == 'rectandle':
+                        elif item['type'] == 'rectangle':
                             self.shapes.append(Rectangle(item['id'], item['type'], item['side_length'], item['side_width'], self.my_logger))
                 except Exception as e:
                     self.my_logger.exception(f"there was an exeption while reading the json: {e}")
 
        except FileNotFoundError as e:
            self.my_logger.exception(f"there was an exeption while opening the json: {e}")
+
+
+   def __get_keys(self):
+       """
+       get all keys of shapes
+
+       Returns:
+        List: list of all keys
+       """
+       if len(self.shapes) == 0:
+           return []
+       return [shape.shape_id for shape in self.shapes]
+       
+    
+   def __calculate_id(self):
+       """
+       calculate id based on largest index
+
+       Returns:
+            int: id of shape
+       """
+       max_id = 0
+       if not self.shapes:
+           return 1
+       return max(self.__get_keys()) + 1
 
 
 def main():

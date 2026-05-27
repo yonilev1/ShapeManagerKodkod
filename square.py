@@ -21,7 +21,7 @@ class Square(shape.Shape):
 
        if not isinstance(length, (int, float)):
           self.logger.error(f"type of {length} should be int/float and not {type(length)}. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
-          raise ValueError(f"type of {length} should be int/float and not {type(length)}")
+          raise ValueError(f"type of {length} should be int and not {type(length)}")
          
        self.length = length
        self.logger.info(f"finished in init in {self.shape_type}. shape_id: {self.shape_id}")
