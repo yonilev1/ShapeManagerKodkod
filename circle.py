@@ -6,6 +6,7 @@ class Circle(shape.Shape):
     class circle, inharits from class Shape
     """
     pei = 3.14
+    count = 0
     def __init__(self, shape_id, shape_type, radius, logger): 
        """
        init function 
@@ -17,14 +18,14 @@ class Circle(shape.Shape):
         logger(logging): the logger
        """
        super().__init__(shape_id, shape_type, logger) 
-       self.logger.info("sent shape_id, shape_type, logger to super() in base class")
+       self.logger.info(f"sent shape_id: {shape_id}, shape_type: {shape_type}, logger to super() in base class")
 
        if not isinstance(radius, (int, float)):
-          self.logger.error(f"type of {radius} should be int/float and not {type(radius)}")
+          self.logger.error(f"type of {radius} should be int/float and not {type(radius)}. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
           raise ValueError(f"type of {radius} should be int/float and not {type(radius)}")
        self.radius = radius
 
-       self.logger.info(f"finished in init in {self.shape_type}")
+       self.logger.info(f"finished in init in {self.shape_type}. shape_id: {self.shape_id}")
  
     def get_area(self):
        """
@@ -33,7 +34,7 @@ class Circle(shape.Shape):
        Returns:
         int/float: area of the circle
        """
-       self.logger.info(f"in function get_area to get area of {self.shape_type}")
+       self.logger.info(f"in function get_area to get area of {self.shape_type}. shape_id: {self.shape_id}")
        return self.radius * self.radius * Circle.pei 
  
     def get_perimeter(self):
@@ -43,7 +44,7 @@ class Circle(shape.Shape):
        Returns:
             int/float: the circle
        """
-       self.logger.info(f"in function get_perimeter to get perimeter of {self.shape_type}")
+       self.logger.info(f"in function get_perimeter to get perimeter of {self.shape_type}. shape_id: {self.shape_id}")
        return 2 * Circle.pei * self.radius 
  
     def to_dict(self): 
@@ -51,8 +52,8 @@ class Circle(shape.Shape):
        Returns:
         a dict with the data of the shape to store in the DB
        """
-       self.logger.info(f"in function to_dict to get dict of {self.shape_type}")
-       return {self.shape_id: {'type':self.shape_type, 'radius':self.radius}}
+       self.logger.info(f"in function to_dict to get dict of {self.shape_type}. shape_id: {self.shape_id}")
+       return {'id':self.shape_id, 'type':self.shape_type, 'radius':self.radius}
  
 
    

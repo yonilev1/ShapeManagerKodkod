@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "type": "square",
+        "side": 2
+    },
+    {
+        "id": 2,
+        "type": "circle",
+        "radius": 3
+    },
+    {
+        "id": 3,
+        "type": "rectangle",
+        "side_length": 4,
+        "side_width": 5
+    }
+]

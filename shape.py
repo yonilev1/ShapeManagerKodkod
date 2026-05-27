@@ -16,7 +16,7 @@ class Shape:
            raise ValueError("the logger cant be None")
        self.logger = logger
 
-       logger.info("in super constuctor to init:  shape_id, shape_type, logger")
+       logger.info(f"in super constuctor to init:  shape_id: {shape_id}, shape_type: {shape_type}, logger")
 
        if not isinstance(shape_id, int):
            self.logger.error(f"type of {shape_id} should be int/float and not {type(shape_id)}")
