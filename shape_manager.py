@@ -1,5 +1,6 @@
 import logger
 import square, rectangle, circle
+import json
 
 class ShapeManager: 
    def __init__(self): 
@@ -36,7 +37,7 @@ class ShapeManager:
        elif shape == 'circle':
            self.my_logger.info("the shape wanted is circle, sending to create in instans")
            radius = input("Enter the radius of the circle : ")
-           my_shape = square.Square(shape_id, shape, radius, self.my_logger)
+           my_shape = circle.Circle(shape_id, shape, radius, self.my_logger)
         
        else:
            self.my_logger.error("got wrong shape type, can get only - circle, square, rectangle")
@@ -119,8 +120,27 @@ class ShapeManager:
        self.my_logger.warning("didnt find shape id in the DB, didnt delete.")
 
  
-   def save_to_json(self): 
-       pass 
+   def save_to_json(self):
+       """
+       function to save the shapes and changes to json
+       """
+       self.my_logger.info("in shape manager. trying to save the shapes and changes to json")
+       try:
+            with open('shapes.json', 'w', encoding='utf-8') as json_file:
+                json.dump(self.shapes, json_file, indent=4)
+       except FileNotFoundError as e:
+           self.my_logger.exception(f"there was an exeption while opening the json: {e}")
+           
+
  
    def load_from_json(self): 
-       pass
+       """
+       function to load the shapes from json
+       """
+       self.my_logger.info("in shape manager. trying to load the shapes from json")
+       try:
+            with open('shapes.json', 'r', encoding='utf-8') as json_file:
+                json.load(self.shapes, json_file)
+       except FileNotFoundError as e:
+           self.my_logger.exception(f"there was an exeption while opening the json: {e}")
+           
