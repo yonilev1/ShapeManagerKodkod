@@ -14,7 +14,7 @@ class ShapeManager:
        """
        self.my_logger = logger.get_logger("shape_logger")
        self.shapes = [] 
-       self.load_from_json()
+       self.__load_from_json()
        self.my_logger.info("in init of ShapeManager")
        
 
@@ -52,9 +52,9 @@ class ShapeManager:
            
         
        self.shapes.append(my_shape)
-       self.save_to_json()
-       self.my_logger.info("shape created successfully, updated json")
-       return id
+       self.__save_to_json()
+       self.my_logger.info(f"shape {shape} with id {id} created successfully, updated json")
+       return shape_id
             
  
    def get_all_shapes(self):
@@ -96,25 +96,28 @@ class ShapeManager:
            raise ValueError(f"new_data not valid, can get only int or float and got {type(new_data_2)}")
        
        for shape in self.shapes:
-           if shape['id'] == shape_id:
-               if shape['type'] == 'circle':
+           if shape.shape_id == shape_id:
+               if shape.shape_type == 'circle':
                    self.my_logger.info("shape is circle, updating radius")
-                   shape['radius'] = new_data_1
-                   self.save_to_json()
+                   shape.radius = new_data_1
+                   self.__save_to_json()
+                   self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
                    return
-               elif shape['type'] == 'square':
+               elif shape.shape_type == 'square':
                    self.my_logger.info("shape is square, updating length")
-                   shape['length'] = new_data_1
-                   self.save_to_json()
+                   shape.length = new_data_1
+                   self.__save_to_json()
+                   self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
                    return
-               elif shape['type'] == 'rectangle':
+               elif shape.shape_type == 'rectangle':
                    side = input("length or width: ")
                    self.my_logger.info(f"shape is rectangle, updating {side.lower()}")
                    if new_data_1:
-                        shape['length_side'.lower()] = new_data_1
+                        shape.length = new_data_1
                    if new_data_2:
-                       shape['width_side'.lower()] = new_data_2
-                   self.save_to_json()
+                       shape.width = new_data_2
+                   self.__save_to_json()
+                   self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
                    return
        self.my_logger.warning("didnt find shape id in the DB, didnt update.")
 
@@ -128,14 +131,15 @@ class ShapeManager:
        """
        self.my_logger.info("in shape manager. trying to delete shape by id")
        for shape in self.shapes:
-           if shape['id'] == shape_id:
+           if shape.shape_id == shape_id:
                self.shapes.remove(shape)
-               self.save_to_json()
+               self.__save_to_json()
+               self.my_logger.info(f"deleted the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
                return
        self.my_logger.warning("didnt find shape id in the DB, didnt delete.")
 
  
-   def save_to_json(self):
+   def __save_to_json(self):
        """
        function to save the shapes and changes to json
        """
@@ -151,7 +155,7 @@ class ShapeManager:
            
 
  
-   def load_from_json(self): 
+   def __load_from_json(self): 
        """
        function to load the shapes from json
        """
