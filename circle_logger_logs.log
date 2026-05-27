@@ -1,0 +1,12 @@
+2026-05-27 09:55:53,534, circle_logger, INFO, finished in super init
+2026-05-27 09:55:53,534, circle_logger, INFO, sent shape_id, shape_type, logger to super() in base class
+2026-05-27 09:55:53,534, circle_logger, INFO, finished in init in circle
+2026-05-27 09:55:53,534, circle_logger, INFO, in function get_area to get area of circle
+2026-05-27 09:55:53,534, circle_logger, INFO, in function get_perimeter to get perimeter of circle
+2026-05-27 09:55:53,535, circle_logger, INFO, in function to_dict to get dict of circle
+2026-05-27 10:03:15,181, circle_logger, INFO, finished in super init
+2026-05-27 10:03:15,184, circle_logger, INFO, sent shape_id, shape_type, logger to super() in base class
+2026-05-27 10:03:15,184, circle_logger, INFO, finished in init in circle
+2026-05-27 10:03:15,184, circle_logger, INFO, in function get_area to get area of circle
+2026-05-27 10:03:15,185, circle_logger, INFO, in function get_perimeter to get perimeter of circle
+2026-05-27 10:03:15,185, circle_logger, INFO, in function to_dict to get dict of circle

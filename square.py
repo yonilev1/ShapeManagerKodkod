@@ -1,4 +1,5 @@
 import shape
+import logger
 
 class Square(shape.Shape):
     """
@@ -16,8 +17,13 @@ class Square(shape.Shape):
        """
        super().__init__(shape_id, shape_type, logger)
        self.logger.info("sent shape_id, shape_type, logger to super() in base class")
+
+       if not isinstance(length, (int, float)):
+          self.logger.error(f"type of {length} should be int/float and not {type(length)}")
+          raise ValueError(f"type of {length} should be int/float and not {type(length)}")
+         
        self.length = length
-       self.logger.info(f"finished in init in {shape_type}")
+       self.logger.info(f"finished in init in {self.shape_type}")
  
     def get_area(self):
        """
@@ -45,6 +51,17 @@ class Square(shape.Shape):
         a dict with the data of the shape to store in the DB
        """
        self.logger.info(f"in function to_dict to get dict of {self.shape_type}")
-       return {'id':self.shape_id, 'type':self.shape_type, 'side':self.length} 
+       return {self.shape_id: {'type':self.shape_type, 'side':self.length}} 
+    
 
- 
+   
+def main():
+    my_logger = logger.get_logger("square_logger")
+    s = Square(1, "square", 2, my_logger)
+    print(s.get_area())
+    print(s.get_perimeter())
+    print(s.to_dict())
+
+
+if __name__ == "__main__":
+   main()

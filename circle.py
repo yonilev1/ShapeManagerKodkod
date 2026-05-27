@@ -1,4 +1,5 @@
 import shape
+import logger
 
 class Circle(shape.Shape):
     """
@@ -17,8 +18,13 @@ class Circle(shape.Shape):
        """
        super().__init__(shape_id, shape_type, logger) 
        self.logger.info("sent shape_id, shape_type, logger to super() in base class")
+
+       if not isinstance(radius, (int, float)):
+          self.logger.error(f"type of {radius} should be int/float and not {type(radius)}")
+          raise ValueError(f"type of {radius} should be int/float and not {type(radius)}")
        self.radius = radius
-       self.logger.info(f"finished in init in {shape_type}")
+
+       self.logger.info(f"finished in init in {self.shape_type}")
  
     def get_area(self):
        """
@@ -46,5 +52,16 @@ class Circle(shape.Shape):
         a dict with the data of the shape to store in the DB
        """
        self.logger.info(f"in function to_dict to get dict of {self.shape_type}")
-       return {'id':self.shape_id, 'type':self.shape_type, 'radius':self.radius}
+       return {self.shape_id: {'type':self.shape_type, 'radius':self.radius}}
  
+
+   
+def main():
+    my_logger = logger.get_logger("circle_logger")
+    c = Circle(1, "circle", 2, my_logger)
+    print(c.get_area())
+    print(c.get_perimeter())
+    print(c.to_dict())
+
+if __name__ == "__main__":
+   main()

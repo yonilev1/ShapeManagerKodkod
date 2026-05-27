@@ -1,10 +1,11 @@
 import shape
+import logger
 
 class Rectangle(shape.Shape):
     """
     class rectangle, inharits from class Shape
     """
-    def __init__(self, shape_id, shape_type, length, witdth, logger): 
+    def __init__(self, shape_id, shape_type, length, width, logger): 
        """
        init function 
 
@@ -17,9 +18,18 @@ class Rectangle(shape.Shape):
        """
        super().__init__(shape_id, shape_type, logger) 
        self.logger.info("sent shape_id, shape_type, logger to super() in base class")
+
+       if not isinstance(length, (int, float)):
+          self.logger.error(f"type of {length} should be int/float and not {type(length)}")
+          raise ValueError(f"type of {length} should be int/float and not {type(length)}")
        self.length = length
-       self.width = witdth
-       self.logger.info(f"finished in init in {shape_type}")
+
+       if not isinstance(width, (int, float)):
+          self.logger.error(f"type of {width} should be int/float and not {type(width)}")
+          raise ValueError(f"type of {width} should be int/float and not {type(width)}")
+       self.width = width
+
+       self.logger.info(f"finished in init in {self.shape_type}")
  
     def get_area(self):
        """
@@ -39,7 +49,7 @@ class Rectangle(shape.Shape):
             int/float: the perimeter
        """
        self.logger.info(f"in function get_perimeter to get perimeter of {self.shape_type}")
-       return 4 * self.length 
+       return 2 * self.length + 2 * self.width
  
     def to_dict(self): 
        """
@@ -47,6 +57,16 @@ class Rectangle(shape.Shape):
         a dict with the data of the shape to store in the DB
        """
        self.logger.info(f"in function to_dict to get dict of {self.shape_type}")
-       return {'id':self.shape_id, 'type':self.shape_type, 'side_length':self.length, 'side_width':self.width} 
+       return {self.shape_id: {'type':self.shape_type, 'side_length':self.length, 'side_width':self.width}}
 
- 
+
+def main():
+    my_logger = logger.get_logger("rectangle_logger")
+    r = Rectangle(1, "rectangle", 2, 4, my_logger)
+    print(r.get_area())
+    print(r.get_perimeter())
+    print(r.to_dict())
+
+
+if __name__ == "__main__":
+   main()

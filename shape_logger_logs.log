@@ -1,0 +1,4 @@
+2026-05-27 10:11:41,038, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
+2026-05-27 10:11:41,039, shape_logger, ERROR, type of shape should be int/float and not <class 'str'>
+2026-05-27 10:12:03,258, shape_logger, INFO, in super constuctor to init:  shape_id, shape_type, logger
+2026-05-27 10:12:03,258, shape_logger, INFO, finished in super init

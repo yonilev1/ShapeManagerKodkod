@@ -1,0 +1,18 @@
+2026-05-27 09:48:11,119, rectangle_logger, INFO, finished in super init
+2026-05-27 09:48:11,119, rectangle_logger, INFO, sent shape_id, shape_type, logger to super() in base class
+2026-05-27 09:48:11,120, rectangle_logger, INFO, finished in init in square
+2026-05-27 09:48:11,120, rectangle_logger, INFO, in function get_area to get area of square
+2026-05-27 09:48:11,120, rectangle_logger, INFO, in function get_perimeter to get perimeter of square
+2026-05-27 09:48:11,120, rectangle_logger, INFO, in function to_dict to get dict of square
+2026-05-27 09:48:49,166, rectangle_logger, INFO, finished in super init
+2026-05-27 09:48:49,167, rectangle_logger, INFO, sent shape_id, shape_type, logger to super() in base class
+2026-05-27 09:48:49,167, rectangle_logger, INFO, finished in init in square
+2026-05-27 09:48:49,167, rectangle_logger, INFO, in function get_area to get area of square
+2026-05-27 09:48:49,167, rectangle_logger, INFO, in function get_perimeter to get perimeter of square
+2026-05-27 09:48:49,167, rectangle_logger, INFO, in function to_dict to get dict of square
+2026-05-27 10:04:08,825, rectangle_logger, INFO, finished in super init
+2026-05-27 10:04:08,825, rectangle_logger, INFO, sent shape_id, shape_type, logger to super() in base class
+2026-05-27 10:04:08,825, rectangle_logger, INFO, finished in init in rectangle
+2026-05-27 10:04:08,825, rectangle_logger, INFO, in function get_area to get area of rectangle
+2026-05-27 10:04:08,826, rectangle_logger, INFO, in function get_perimeter to get perimeter of rectangle
+2026-05-27 10:04:08,826, rectangle_logger, INFO, in function to_dict to get dict of rectangle
