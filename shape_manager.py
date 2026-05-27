@@ -17,7 +17,7 @@ class ShapeManager:
        Args:
         shape(str): the shape user wants
        """
-       self.my_logger.info(f"in create shape with shape {shape}")
+       self.my_logger.info(f"in shape manager. in create shape with shape {shape}")
 
        shape_id = len(self.shapes) + 1
        if not isinstance(shape, str):
@@ -52,7 +52,7 @@ class ShapeManager:
        """
        print all shapes in this way
        """
-       self.my_logger("in get all shapes to print all shapes")
+       self.my_logger("in shape manager. in get all shapes to print all shapes")
        for shape in self.shapes:
            if shape['type'] == 'circle':
                print(f'ID: {shape['id']} \n Type: {shape['type']} \n Radius: {shape['radius']} \n Area: {shape.area()} \n Perimeter: {shape.perimeter()}')
@@ -72,7 +72,16 @@ class ShapeManager:
         shape_id(int): ths uid of shape
         new_date(int/float): new data to update
        """
-       self.my_logger.info("trying to update the shape")
+       self.my_logger.info("in shape manager. trying to update the shape")
+       
+       if not isinstance(shape_id, (int,float)):
+           self.my_logger.error(f"shape id not valid, can get only int or float and got {type(shape_id)}")
+           raise ValueError(f"shape id not valid, can get only int or float and got {type(shape_id)}")
+       
+       if not isinstance(new_data, (int,float)):
+           self.my_logger.error(f"new_data not valid, can get only int or float and got {type(new_data)}")
+           raise ValueError(f"new_data not valid, can get only int or float and got {type(new_data)}")
+       
        for shape in self.shapes:
            if shape['id'] == shape_id:
                if shape['type'] == 'circle':
@@ -94,8 +103,21 @@ class ShapeManager:
        self.my_logger.warning("didnt find shape id in the DB, didnt update.")
 
  
-   def delete_shape(self, shape_id): 
-       pass 
+   def delete_shape(self, shape_id):
+       """
+       to delete shape from list
+
+       Args:
+            shape_id(int): id of shape
+       """
+       self.my_logger.info("in shape manager. trying to delete shape by id")
+       for shape in self.shapes:
+           if shape['id'] == shape_id:
+               self.shapes.remove(shape)
+               self.save_to_json()
+               return
+       self.my_logger.warning("didnt find shape id in the DB, didnt delete.")
+
  
    def save_to_json(self): 
        pass 
