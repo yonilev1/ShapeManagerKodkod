@@ -407,3 +407,894 @@ AttributeError: 'Circle' object has no attribute 'logger'. Did you mean: 'my_log
 2026-05-28 11:54:59,424, shape_logger, INFO, in function get_perimeter to get perimeter of rectangle. shape_id: 3
 2026-05-28 11:54:59,425, shape_logger, INFO, in function get_area to get area of square. shape_id: 4
 2026-05-28 11:54:59,425, shape_logger, INFO, in function get_perimeter to get perimeter of square. shape_id: 4
+2026-05-28 12:18:18,475, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 12:18:18,475, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 12:18:18,476, shape_logger, INFO, trying to turn shape {'id': 2, 'type': 'circle', 'radius': 2} back in to object style
+2026-05-28 12:18:18,476, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: circle, my_logger
+2026-05-28 12:18:18,476, shape_logger, INFO, finished in super init
+2026-05-28 12:18:18,476, shape_logger, INFO, sent shape_id: 2, shape_type: circle, my_logger to super() in base class
+2026-05-28 12:18:18,476, shape_logger, INFO, finished in init in circle. shape_id: 2
+2026-05-28 12:18:18,476, shape_logger, INFO, trying to turn shape {'id': 3, 'type': 'rectangle', 'side_length': 1, 'side_width': 2} back in to object style
+2026-05-28 12:18:18,476, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 12:18:18,476, shape_logger, INFO, finished in super init
+2026-05-28 12:18:18,476, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 12:18:18,476, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 12:18:18,476, shape_logger, INFO, trying to turn shape {'id': 4, 'type': 'square', 'side': 6} back in to object style
+2026-05-28 12:18:18,476, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 12:18:18,476, shape_logger, INFO, finished in super init
+2026-05-28 12:18:18,476, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 12:18:18,476, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 12:18:18,476, shape_logger, INFO, in init of ShapeManager
+2026-05-28 12:18:27,075, shape_logger, INFO, found the shape by its id: 2, returning shapes kind
+2026-05-28 12:18:29,575, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 12:18:29,576, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 12:18:29,577, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 2
+2026-05-28 12:18:29,577, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 12:18:29,577, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 12:18:29,577, shape_logger, INFO, apdated the shape circle with id 2, and save to json
+2026-05-28 12:18:37,292, shape_logger, INFO, found the shape by its id: 3, returning shapes kind
+2026-05-28 12:18:49,126, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 12:18:49,126, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 12:18:49,127, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 2
+2026-05-28 12:18:49,128, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 12:18:49,128, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 12:18:49,128, shape_logger, INFO, apdated the shape rectangle with id 3, and save to json
+2026-05-28 12:18:52,736, shape_logger, INFO, found the shape by its id: 4, returning shapes kind
+2026-05-28 12:18:55,638, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 12:18:55,638, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 12:18:55,639, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 2
+2026-05-28 12:18:55,639, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 12:18:55,639, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 12:18:55,639, shape_logger, INFO, apdated the shape square with id 4, and save to json
+2026-05-28 12:44:09,324, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 12:44:09,325, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 12:44:09,325, shape_logger, INFO, trying to turn shape {'id': 2, 'type': 'circle', 'radius': 3} back in to object style
+2026-05-28 12:44:09,325, shape_logger, ERROR, there was an exeption while reading the json: 'int' object has no attribute 'info'
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 139, in __load_from_json
+    self.shapes.append(Circle(item['id'], item['type'], item['radius'], self.my_logger))
+                       ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Yonil\shapes_project_kodkod\circle.py", line 19, in __init__
+    super().__init__(shape_id, shape_type, my_logger)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Yonil\shapes_project_kodkod\shape.py", line 19, in __init__
+    my_logger.info(f"in super constuctor to init:  shape_id: {shape_id}, shape_type: {shape_type}, my_logger")
+    ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'info'
+2026-05-28 12:44:09,335, shape_logger, INFO, in init of ShapeManager
+2026-05-28 12:49:15,702, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 12:49:15,703, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 12:49:15,703, shape_logger, ERROR, there was an exeption while reading the json: 'ShapeManager' object has no attribute 'contructors'
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 137, in __load_from_json
+    contructor = self.contructors[shape]
+                 ^^^^^^^^^^^^^^^^
+AttributeError: 'ShapeManager' object has no attribute 'contructors'
+2026-05-28 12:49:15,712, shape_logger, INFO, in init of ShapeManager
+2026-05-28 12:50:54,951, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 12:50:54,952, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 12:50:54,952, shape_logger, ERROR, there was an exeption while reading the json: 'ShapeManager' object has no attribute 'contructors'
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 137, in __load_from_json
+    contructor = self.contructors[shape]
+                 ^^^^^^^^^^^^^^^^
+AttributeError: 'ShapeManager' object has no attribute 'contructors'
+2026-05-28 12:50:54,957, shape_logger, INFO, in init of ShapeManager
+2026-05-28 12:55:08,865, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 12:55:08,865, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 12:55:08,865, shape_logger, ERROR, there was an exeption while reading the json: 'ShapeManager' object has no attribute 'contructors'
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 137, in __load_from_json
+    contructor = self.contructors[shape['type']]
+                 ^^^^^^^^^^^^^^^^
+AttributeError: 'ShapeManager' object has no attribute 'contructors'
+2026-05-28 12:55:08,868, shape_logger, INFO, in init of ShapeManager
+2026-05-28 12:55:43,068, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 12:55:43,068, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 12:55:43,069, shape_logger, ERROR, there was an exeption while reading the json: 'ShapeManager' object has no attribute 'contructors'
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 137, in __load_from_json
+    contructor = self.contructors[shape['type']]
+                 ^^^^^^^^^^^^^^^^
+AttributeError: 'ShapeManager' object has no attribute 'contructors'
+2026-05-28 12:55:43,072, shape_logger, INFO, in init of ShapeManager
+2026-05-28 13:19:05,591, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:19:05,591, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:19:05,594, shape_logger, ERROR, there was an exeption while reading the json: cannot access local variable 'my_shape' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 138, in __load_from_json
+    width = my_shape['width'] if my_shape['width'] else None
+                                 ^^^^^^^^
+UnboundLocalError: cannot access local variable 'my_shape' where it is not associated with a value
+2026-05-28 13:19:05,598, shape_logger, INFO, in init of ShapeManager
+2026-05-28 13:21:22,608, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:21:22,608, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:21:22,608, shape_logger, ERROR, there was an exeption while reading the json: 'width'
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 138, in __load_from_json
+    width = my_shape['width'] if my_shape['width'] else None
+                                 ~~~~~~~~^^^^^^^^^
+KeyError: 'width'
+2026-05-28 13:21:22,611, shape_logger, INFO, in init of ShapeManager
+2026-05-28 13:22:20,895, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:22:20,895, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:22:20,895, shape_logger, ERROR, there was an exeption while reading the json: 'length/radius'
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 141, in __load_from_json
+    my_shape = contructor(my_shape['id'], my_shape['type'], self.my_logger, my_shape['length/radius'], width)
+                                                                            ~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'length/radius'
+2026-05-28 13:22:20,898, shape_logger, INFO, in init of ShapeManager
+2026-05-28 13:23:13,879, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:23:13,879, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:23:13,879, shape_logger, ERROR, there was an exeption while reading the json: 'length/radius'
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 141, in __load_from_json
+    my_shape = contructor(my_shape['id'], my_shape['type'], self.my_logger, my_shape['length/radius'], width)
+                                                                            ~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'length/radius'
+2026-05-28 13:23:13,883, shape_logger, INFO, in init of ShapeManager
+2026-05-28 13:23:56,664, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:23:56,677, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:23:56,677, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: circle, my_logger
+2026-05-28 13:23:56,677, shape_logger, INFO, finished in super init
+2026-05-28 13:23:56,677, shape_logger, INFO, sent shape_id: 2, shape_type: circle, my_logger to super() in base class
+2026-05-28 13:23:56,677, shape_logger, ERROR, type of (3, None) should be int/float and not <class 'tuple'>. shape_id: 2, shape_type: circle
+2026-05-28 13:23:56,677, shape_logger, ERROR, there was an exeption while reading the json: type of (3, None) should be int/float and not <class 'tuple'>
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 141, in __load_from_json
+    my_shape = contructor(my_shape['id'], my_shape['type'], self.my_logger, my_shape['length/radius'], width)
+  File "c:\Users\Yonil\shapes_project_kodkod\circle.py", line 25, in __init__
+    raise ValueError(f"type of {radius} should be int/float and not {type(radius)}")
+ValueError: type of (3, None) should be int/float and not <class 'tuple'>
+2026-05-28 13:23:56,684, shape_logger, INFO, in init of ShapeManager
+2026-05-28 13:28:16,532, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:28:16,532, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:28:16,532, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: circle, my_logger
+2026-05-28 13:28:16,532, shape_logger, INFO, finished in super init
+2026-05-28 13:28:16,532, shape_logger, INFO, sent shape_id: 2, shape_type: circle, my_logger to super() in base class
+2026-05-28 13:28:16,533, shape_logger, INFO, finished in init in circle. shape_id: 2
+2026-05-28 13:28:16,533, shape_logger, ERROR, there was an exeption while reading the json: 'Circle' object is not subscriptable
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 142, in __load_from_json
+    self.my_logger.info(f"trying to turn shape {my_shape['type']} with id {my_shape['id']} back in to object style")
+                                                ~~~~~~~~^^^^^^^^
+TypeError: 'Circle' object is not subscriptable
+2026-05-28 13:28:16,540, shape_logger, INFO, in init of ShapeManager
+2026-05-28 13:47:03,903, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:47:03,904, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:47:03,904, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: circle, my_logger
+2026-05-28 13:47:03,904, shape_logger, INFO, finished in super init
+2026-05-28 13:47:03,904, shape_logger, INFO, sent shape_id: 2, shape_type: circle, my_logger to super() in base class
+2026-05-28 13:47:03,904, shape_logger, INFO, finished in init in circle. shape_id: 2
+2026-05-28 13:47:03,904, shape_logger, INFO, trying to turn shape circle with id 2 back in to object style
+2026-05-28 13:47:03,904, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 13:47:03,904, shape_logger, INFO, finished in super init
+2026-05-28 13:47:03,904, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 13:47:03,904, shape_logger, ERROR, type of None should be int/float and not <class 'NoneType'>. shape_id: 3, shape_type: rectangle
+2026-05-28 13:47:03,904, shape_logger, ERROR, there was an exeption while reading the json: type of None should be int/float and not <class 'NoneType'>
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 141, in __load_from_json
+    shape_back_to_object = contructor(shape['id'], shape['type'], self.my_logger, shape['length/radius'], width)
+  File "c:\Users\Yonil\shapes_project_kodkod\rectangle.py", line 31, in __init__
+    raise ValueError(f"type of {width} should be int/float and not {type(width)}")
+ValueError: type of None should be int/float and not <class 'NoneType'>
+2026-05-28 13:47:03,908, shape_logger, INFO, in init of ShapeManager
+2026-05-28 13:54:45,407, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:54:55,636, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:56:18,743, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: circle, my_logger
+2026-05-28 13:56:18,743, shape_logger, INFO, finished in super init
+2026-05-28 13:56:18,743, shape_logger, INFO, sent shape_id: 2, shape_type: circle, my_logger to super() in base class
+2026-05-28 13:56:18,743, shape_logger, INFO, finished in init in circle. shape_id: 2
+2026-05-28 13:56:21,529, shape_logger, INFO, trying to turn shape circle with id 2 back in to object style
+2026-05-28 13:56:44,960, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:56:44,961, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:56:44,961, shape_logger, INFO, in super constuctor to init:  shape_id: 2, shape_type: circle, my_logger
+2026-05-28 13:56:44,961, shape_logger, INFO, finished in super init
+2026-05-28 13:56:44,961, shape_logger, INFO, sent shape_id: 2, shape_type: circle, my_logger to super() in base class
+2026-05-28 13:56:44,961, shape_logger, INFO, finished in init in circle. shape_id: 2
+2026-05-28 13:56:44,961, shape_logger, INFO, trying to turn shape circle with id 2 back in to object style
+2026-05-28 13:56:44,961, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 13:56:44,961, shape_logger, INFO, finished in super init
+2026-05-28 13:56:44,961, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 13:56:44,961, shape_logger, ERROR, type of None should be int/float and not <class 'NoneType'>. shape_id: 3, shape_type: rectangle
+2026-05-28 13:56:44,961, shape_logger, ERROR, there was an exeption while reading the json: type of None should be int/float and not <class 'NoneType'>
+Traceback (most recent call last):
+  File "c:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 141, in __load_from_json
+    shape_back_to_object = contructor(shape['id'], shape['type'], self.my_logger, shape['length/radius'], width)
+  File "c:\Users\Yonil\shapes_project_kodkod\rectangle.py", line 31, in __init__
+    raise ValueError(f"type of {width} should be int/float and not {type(width)}")
+ValueError: type of None should be int/float and not <class 'NoneType'>
+2026-05-28 13:56:44,966, shape_logger, INFO, in init of ShapeManager
+2026-05-28 13:59:14,939, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:59:19,844, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:59:55,042, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 13:59:55,042, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 13:59:55,042, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 13:59:55,042, shape_logger, INFO, finished in super init
+2026-05-28 13:59:55,042, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 13:59:55,042, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 13:59:55,042, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 13:59:55,042, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 13:59:55,042, shape_logger, INFO, finished in super init
+2026-05-28 13:59:55,042, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 13:59:55,043, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 13:59:55,043, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 13:59:55,043, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 13:59:55,043, shape_logger, INFO, finished in super init
+2026-05-28 13:59:55,043, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 13:59:55,043, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 13:59:55,043, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 13:59:55,043, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:00:37,031, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:00:37,032, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 14:00:37,032, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:00:37,032, shape_logger, INFO, finished in super init
+2026-05-28 14:00:37,032, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:00:37,032, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:00:37,032, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:00:37,032, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:00:37,032, shape_logger, INFO, finished in super init
+2026-05-28 14:00:37,032, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:00:37,032, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:00:37,032, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:00:37,032, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:00:37,032, shape_logger, INFO, finished in super init
+2026-05-28 14:00:37,032, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:00:37,032, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:00:37,032, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:00:37,032, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:01:54,689, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:01:54,689, shape_logger, INFO, extract json to temp list, there are 3 shapes
+2026-05-28 14:01:54,689, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:01:54,689, shape_logger, INFO, finished in super init
+2026-05-28 14:01:54,689, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:01:54,689, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:01:54,689, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:01:54,689, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:01:54,689, shape_logger, INFO, finished in super init
+2026-05-28 14:01:54,689, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:01:54,689, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:01:54,689, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:01:54,689, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:01:54,689, shape_logger, INFO, finished in super init
+2026-05-28 14:01:54,689, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:01:54,689, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:01:54,689, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:01:54,689, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:01:57,577, shape_logger, INFO, in shape manager. in create shape with shape: circle, id: 6
+2026-05-28 14:01:57,578, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:01:57,578, shape_logger, INFO, finished in super init
+2026-05-28 14:01:57,578, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:01:57,578, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:01:57,578, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:01:57,579, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:01:57,579, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:01:57,579, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:01:57,580, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:01:57,580, shape_logger, INFO, shape circle with id 6 created successfully, updated json
+2026-05-28 14:02:13,828, shape_logger, INFO, in shape manager. in create shape with shape: square, id: 7
+2026-05-28 14:02:13,828, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:02:13,828, shape_logger, INFO, finished in super init
+2026-05-28 14:02:13,828, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:02:13,828, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:02:13,828, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:02:13,829, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:02:13,829, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:02:13,829, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:02:13,829, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:02:13,829, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 7
+2026-05-28 14:02:13,829, shape_logger, INFO, shape square with id 7 created successfully, updated json
+2026-05-28 14:02:26,851, shape_logger, INFO, in shape manager. in create shape with shape: rectangle, id: 8
+2026-05-28 14:02:26,851, shape_logger, INFO, in super constuctor to init:  shape_id: 8, shape_type: rectangle, my_logger
+2026-05-28 14:02:26,852, shape_logger, INFO, finished in super init
+2026-05-28 14:02:26,852, shape_logger, INFO, sent shape_id: 8, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:02:26,852, shape_logger, INFO, finished in init in rectangle. shape_id: 8, shape_type: rectangle
+2026-05-28 14:02:26,852, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:02:26,852, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:02:26,852, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:02:26,853, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:02:26,853, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:02:26,853, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 7
+2026-05-28 14:02:26,853, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 8
+2026-05-28 14:02:26,853, shape_logger, INFO, shape rectangle with id 8 created successfully, updated json
+2026-05-28 14:02:39,024, shape_logger, INFO, found the shape by its id: 8, returning shapes kind
+2026-05-28 14:02:44,584, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:02:44,584, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:02:44,585, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:02:44,586, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:02:44,586, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:02:44,586, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:02:44,586, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 7
+2026-05-28 14:02:44,586, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 8
+2026-05-28 14:02:44,586, shape_logger, INFO, apdated the shape rectangle with id 8, and save to json
+2026-05-28 14:03:52,805, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:03:52,819, shape_logger, INFO, extract json to temp list, there are 6 shapes
+2026-05-28 14:03:52,819, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:03:52,820, shape_logger, INFO, finished in super init
+2026-05-28 14:03:52,820, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:03:52,820, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:03:52,820, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:03:52,820, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:03:52,820, shape_logger, INFO, finished in super init
+2026-05-28 14:03:52,820, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:03:52,820, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:03:52,820, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:03:52,821, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:03:52,821, shape_logger, INFO, finished in super init
+2026-05-28 14:03:52,821, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:03:52,821, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:03:52,821, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:03:52,821, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:03:52,821, shape_logger, INFO, finished in super init
+2026-05-28 14:03:52,821, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:03:52,821, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:03:52,821, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:03:52,821, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:03:52,821, shape_logger, INFO, finished in super init
+2026-05-28 14:03:52,821, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:03:52,821, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:03:52,821, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:03:52,821, shape_logger, INFO, in super constuctor to init:  shape_id: 8, shape_type: rectangle, my_logger
+2026-05-28 14:03:52,821, shape_logger, INFO, finished in super init
+2026-05-28 14:03:52,821, shape_logger, INFO, sent shape_id: 8, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:03:52,821, shape_logger, INFO, finished in init in rectangle. shape_id: 8, shape_type: rectangle
+2026-05-28 14:03:52,821, shape_logger, INFO, trying to turn shape rectangle with id 8 back in to object style
+2026-05-28 14:03:52,821, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:03:55,442, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 6
+2026-05-28 14:03:55,442, shape_logger, INFO, in function get_area to get area of rectangle. shape_id: 3
+2026-05-28 14:03:55,442, shape_logger, INFO, in function get_perimeter to get perimeter of rectangle. shape_id: 3
+2026-05-28 14:03:55,443, shape_logger, INFO, in function get_area to get area of square. shape_id: 4
+2026-05-28 14:03:55,443, shape_logger, INFO, in function get_perimeter to get perimeter of square. shape_id: 4
+2026-05-28 14:03:55,443, shape_logger, INFO, in function get_area to get area of circle. shape_id: 5
+2026-05-28 14:03:55,443, shape_logger, INFO, in function get_perimeter to get perimeter of circle. shape_id: 5
+2026-05-28 14:03:55,443, shape_logger, INFO, in function get_area to get area of circle. shape_id: 6
+2026-05-28 14:03:55,443, shape_logger, INFO, in function get_perimeter to get perimeter of circle. shape_id: 6
+2026-05-28 14:03:55,444, shape_logger, INFO, in function get_area to get area of square. shape_id: 7
+2026-05-28 14:03:55,444, shape_logger, INFO, in function get_perimeter to get perimeter of square. shape_id: 7
+2026-05-28 14:03:55,444, shape_logger, INFO, in function get_area to get area of rectangle. shape_id: 8
+2026-05-28 14:03:55,444, shape_logger, INFO, in function get_perimeter to get perimeter of rectangle. shape_id: 8
+2026-05-28 14:04:29,137, shape_logger, INFO, found the shape by its id: 8, returning shapes kind
+2026-05-28 14:04:38,081, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:04:38,082, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:04:38,082, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:04:38,083, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:04:38,083, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:04:38,083, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:04:38,083, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 7
+2026-05-28 14:04:38,083, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 8
+2026-05-28 14:04:38,083, shape_logger, INFO, apdated the shape rectangle with id 8, and save to json
+2026-05-28 14:06:33,160, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:06:33,162, shape_logger, INFO, extract json to temp list, there are 6 shapes
+2026-05-28 14:06:33,163, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:06:33,163, shape_logger, INFO, finished in super init
+2026-05-28 14:06:33,163, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:06:33,163, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:06:33,163, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:06:33,164, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:06:33,164, shape_logger, INFO, finished in super init
+2026-05-28 14:06:33,164, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:06:33,164, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:06:33,164, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:06:33,165, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:06:33,165, shape_logger, INFO, finished in super init
+2026-05-28 14:06:33,165, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:06:33,166, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:06:33,166, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:06:33,166, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:06:33,166, shape_logger, INFO, finished in super init
+2026-05-28 14:06:33,166, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:06:33,167, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:06:33,167, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:06:33,167, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:06:33,167, shape_logger, INFO, finished in super init
+2026-05-28 14:06:33,167, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:06:33,167, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:06:33,167, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:06:33,168, shape_logger, INFO, in super constuctor to init:  shape_id: 8, shape_type: rectangle, my_logger
+2026-05-28 14:06:33,168, shape_logger, INFO, finished in super init
+2026-05-28 14:06:33,168, shape_logger, INFO, sent shape_id: 8, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:06:33,168, shape_logger, ERROR, type of None should be int/float and not <class 'NoneType'>. shape_id: 8, shape_type: rectangle
+2026-05-28 14:06:33,169, shape_logger, ERROR, there was an exeption while reading the json: type of None should be int/float and not <class 'NoneType'>
+Traceback (most recent call last):
+  File "C:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 141, in __load_from_json
+    shape_back_to_object = contructor(shape['id'], shape['type'], self.my_logger, shape['length/radius'], width)
+  File "C:\Users\Yonil\shapes_project_kodkod\rectangle.py", line 31, in __init__
+    raise ValueError(f"type of {width} should be int/float and not {type(width)}")
+ValueError: type of None should be int/float and not <class 'NoneType'>
+2026-05-28 14:06:33,178, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:06:36,784, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:07:22,693, shape_logger, WARNING, didnt find shape id 8 in the DB, didnt update.
+2026-05-28 14:08:13,407, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:08:13,409, shape_logger, INFO, extract json to temp list, there are 6 shapes
+2026-05-28 14:08:13,410, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:08:13,410, shape_logger, INFO, finished in super init
+2026-05-28 14:08:13,410, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:08:13,410, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:08:13,411, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:08:13,411, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:08:13,411, shape_logger, INFO, finished in super init
+2026-05-28 14:08:13,411, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:08:13,411, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:08:13,411, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:08:13,412, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:08:13,412, shape_logger, INFO, finished in super init
+2026-05-28 14:08:13,412, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:08:13,412, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:08:13,412, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:08:13,412, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:08:13,412, shape_logger, INFO, finished in super init
+2026-05-28 14:08:13,412, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:08:13,413, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:08:13,413, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:08:13,413, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:08:13,413, shape_logger, INFO, finished in super init
+2026-05-28 14:08:13,413, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:08:13,413, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:08:13,413, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:08:13,414, shape_logger, INFO, in super constuctor to init:  shape_id: 8, shape_type: rectangle, my_logger
+2026-05-28 14:08:13,414, shape_logger, INFO, finished in super init
+2026-05-28 14:08:13,414, shape_logger, INFO, sent shape_id: 8, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:08:13,414, shape_logger, ERROR, type of None should be int/float and not <class 'NoneType'>. shape_id: 8, shape_type: rectangle
+2026-05-28 14:08:13,415, shape_logger, ERROR, there was an exeption while reading the json: type of None should be int/float and not <class 'NoneType'>
+Traceback (most recent call last):
+  File "C:\Users\Yonil\shapes_project_kodkod\shape_manager.py", line 141, in __load_from_json
+    shape_back_to_object = contructor(shape['id'], shape['type'], self.my_logger, shape['length/radius'], width)
+  File "C:\Users\Yonil\shapes_project_kodkod\rectangle.py", line 31, in __init__
+    raise ValueError(f"type of {width} should be int/float and not {type(width)}")
+ValueError: type of None should be int/float and not <class 'NoneType'>
+2026-05-28 14:08:13,426, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:08:19,152, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:09:32,149, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:09:32,170, shape_logger, INFO, extract json to temp list, there are 6 shapes
+2026-05-28 14:09:32,170, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:09:32,171, shape_logger, INFO, finished in super init
+2026-05-28 14:09:32,171, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:09:32,172, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:09:32,172, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:09:32,172, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:09:32,173, shape_logger, INFO, finished in super init
+2026-05-28 14:09:32,173, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:09:32,173, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:09:32,173, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:09:32,173, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:09:32,173, shape_logger, INFO, finished in super init
+2026-05-28 14:09:32,173, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:09:32,174, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:09:32,174, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:09:32,174, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:09:32,174, shape_logger, INFO, finished in super init
+2026-05-28 14:09:32,174, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:09:32,174, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:09:32,174, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:09:32,175, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:09:32,175, shape_logger, INFO, finished in super init
+2026-05-28 14:09:32,175, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:09:32,175, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:09:32,175, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:09:32,175, shape_logger, INFO, in super constuctor to init:  shape_id: 8, shape_type: rectangle, my_logger
+2026-05-28 14:09:32,175, shape_logger, INFO, finished in super init
+2026-05-28 14:09:32,176, shape_logger, INFO, sent shape_id: 8, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:09:32,176, shape_logger, INFO, finished in init in rectangle. shape_id: 8, shape_type: rectangle
+2026-05-28 14:09:32,176, shape_logger, INFO, trying to turn shape rectangle with id 8 back in to object style
+2026-05-28 14:09:32,176, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:09:34,311, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:10:09,869, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:10:09,869, shape_logger, INFO, extract json to temp list, there are 6 shapes
+2026-05-28 14:10:09,869, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:10:09,869, shape_logger, INFO, finished in super init
+2026-05-28 14:10:09,870, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:10:09,870, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:10:09,870, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in super init
+2026-05-28 14:10:09,870, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:10:09,870, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:10:09,870, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in super init
+2026-05-28 14:10:09,870, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:10:09,870, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:10:09,870, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in super init
+2026-05-28 14:10:09,870, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:10:09,870, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:10:09,870, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in super init
+2026-05-28 14:10:09,870, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:10:09,870, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:10:09,870, shape_logger, INFO, in super constuctor to init:  shape_id: 8, shape_type: rectangle, my_logger
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in super init
+2026-05-28 14:10:09,870, shape_logger, INFO, sent shape_id: 8, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:10:09,870, shape_logger, INFO, finished in init in rectangle. shape_id: 8, shape_type: rectangle
+2026-05-28 14:10:09,870, shape_logger, INFO, trying to turn shape rectangle with id 8 back in to object style
+2026-05-28 14:10:09,870, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:10:15,743, shape_logger, INFO, found the shape by its id: 8, returning shapes kind
+2026-05-28 14:10:19,280, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:10:19,281, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:10:19,281, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:10:19,282, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:10:19,282, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:10:19,282, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:10:19,282, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 7
+2026-05-28 14:10:19,282, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 8
+2026-05-28 14:10:19,283, shape_logger, INFO, apdated the shape rectangle with id 8, and save to json
+2026-05-28 14:10:30,456, shape_logger, INFO, found the shape by its id: 8, returning shapes kind
+2026-05-28 14:10:34,930, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:10:34,931, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:10:34,931, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:10:34,931, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:10:34,931, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:10:34,932, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:10:34,932, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 7
+2026-05-28 14:10:34,932, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 8
+2026-05-28 14:10:34,932, shape_logger, INFO, apdated the shape rectangle with id 8, and save to json
+2026-05-28 14:10:41,815, shape_logger, INFO, found the shape by its id: 8, returning shapes kind
+2026-05-28 14:10:48,471, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:10:48,471, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:10:48,472, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:10:48,472, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:10:48,472, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:10:48,472, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:10:48,472, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 7
+2026-05-28 14:10:48,472, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 8
+2026-05-28 14:10:48,472, shape_logger, INFO, apdated the shape rectangle with id 8, and save to json
+2026-05-28 14:10:53,557, shape_logger, INFO, found the shape by its id: 7, returning shapes kind
+2026-05-28 14:10:56,331, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:10:56,331, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:10:56,332, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:10:56,332, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:10:56,332, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:10:56,332, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:10:56,332, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 7
+2026-05-28 14:10:56,332, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 8
+2026-05-28 14:10:56,333, shape_logger, INFO, apdated the shape square with id 7, and save to json
+2026-05-28 14:11:05,293, shape_logger, INFO, found the shape by its id: 6, returning shapes kind
+2026-05-28 14:11:06,188, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:11:06,189, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:11:06,190, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:11:06,190, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:11:06,190, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:11:06,190, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:11:06,191, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 7
+2026-05-28 14:11:06,191, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 8
+2026-05-28 14:11:06,191, shape_logger, INFO, apdated the shape circle with id 6, and save to json
+2026-05-28 14:11:11,561, shape_logger, INFO, in shape manager. trying to delete shape by id
+2026-05-28 14:11:11,562, shape_logger, INFO, in shape manager. trying to save the shapes and changes to json
+2026-05-28 14:11:11,563, shape_logger, INFO, in function to_dict to get dict of rectangle. shape_id: 3
+2026-05-28 14:11:11,563, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 4
+2026-05-28 14:11:11,563, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 5
+2026-05-28 14:11:11,563, shape_logger, INFO, in function to_dict to get dict of circle. shape_id: 6
+2026-05-28 14:11:11,563, shape_logger, INFO, in function to_dict to get dict of square. shape_id: 7
+2026-05-28 14:11:11,563, shape_logger, INFO, deleted the shape rectangle with id 8, and save to json
+2026-05-28 14:12:25,758, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:12:25,758, shape_logger, INFO, extract json to temp list, there are 5 shapes
+2026-05-28 14:12:25,758, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:12:25,758, shape_logger, INFO, finished in super init
+2026-05-28 14:12:25,758, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:12:25,758, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:12:25,758, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:12:25,759, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:12:25,759, shape_logger, INFO, finished in super init
+2026-05-28 14:12:25,759, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:12:25,759, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:12:25,759, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:12:25,759, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:12:25,759, shape_logger, INFO, finished in super init
+2026-05-28 14:12:25,759, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:12:25,759, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:12:25,759, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:12:25,759, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:12:25,759, shape_logger, INFO, finished in super init
+2026-05-28 14:12:25,759, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:12:25,759, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:12:25,759, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:12:25,759, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:12:25,759, shape_logger, INFO, finished in super init
+2026-05-28 14:12:25,759, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:12:25,759, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:12:25,759, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:12:25,759, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:12:25,759, shape_logger, INFO, in shape manager. in create shape with shape: triangle, id: 8
+2026-05-28 14:12:25,759, shape_logger, INFO, in shape manager. in create shape with shape: circle, id: 8
+2026-05-28 14:12:25,759, shape_logger, INFO, in super constuctor to init:  shape_id: 8, shape_type: circle, my_logger
+2026-05-28 14:12:25,759, shape_logger, INFO, finished in super init
+2026-05-28 14:12:25,759, shape_logger, INFO, sent shape_id: 8, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:12:25,759, shape_logger, ERROR, type of None should be int/float and not <class 'NoneType'>. shape_id: 8, shape_type: circle
+2026-05-28 14:12:25,759, shape_logger, INFO, in shape manager. in create shape with shape: rectangle, id: 8
+2026-05-28 14:12:25,759, shape_logger, INFO, in super constuctor to init:  shape_id: 8, shape_type: rectangle, my_logger
+2026-05-28 14:12:25,759, shape_logger, INFO, finished in super init
+2026-05-28 14:12:25,759, shape_logger, INFO, sent shape_id: 8, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:12:25,759, shape_logger, ERROR, type of None should be int/float and not <class 'NoneType'>. shape_id: 8, shape_type: rectangle
+2026-05-28 14:12:25,759, shape_logger, WARNING, didnt find the id: 9999
+2026-05-28 14:12:25,759, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:12:25,759, shape_logger, WARNING, didnt find shape id 9999 in the DB, didnt update.
+2026-05-28 14:12:25,759, shape_logger, INFO, in shape manager. trying to delete shape by id
+2026-05-28 14:12:25,759, shape_logger, WARNING, didnt find shape id 9999 in the DB, didnt delete.
+2026-05-28 14:12:40,494, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:12:40,494, shape_logger, INFO, extract json to temp list, there are 5 shapes
+2026-05-28 14:12:40,494, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:12:40,495, shape_logger, INFO, finished in super init
+2026-05-28 14:12:40,495, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:12:40,495, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:12:40,495, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:12:40,495, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:12:40,495, shape_logger, INFO, finished in super init
+2026-05-28 14:12:40,495, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:12:40,495, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:12:40,495, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:12:40,495, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:12:40,495, shape_logger, INFO, finished in super init
+2026-05-28 14:12:40,495, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:12:40,495, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:12:40,495, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:12:40,495, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:12:40,495, shape_logger, INFO, finished in super init
+2026-05-28 14:12:40,495, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:12:40,495, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:12:40,495, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:12:40,495, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:12:40,495, shape_logger, INFO, finished in super init
+2026-05-28 14:12:40,495, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:12:40,495, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:12:40,495, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:12:40,495, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:13:04,717, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:13:04,717, shape_logger, INFO, extract json to temp list, there are 5 shapes
+2026-05-28 14:13:04,717, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:13:04,717, shape_logger, INFO, finished in super init
+2026-05-28 14:13:04,717, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:13:04,717, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:13:04,717, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:13:04,717, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:13:04,717, shape_logger, INFO, finished in super init
+2026-05-28 14:13:04,717, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:13:04,717, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:13:04,717, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:13:04,717, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:13:04,717, shape_logger, INFO, finished in super init
+2026-05-28 14:13:04,717, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:13:04,717, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:13:04,717, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:13:04,717, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:13:04,717, shape_logger, INFO, finished in super init
+2026-05-28 14:13:04,717, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:13:04,717, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:13:04,717, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:13:04,717, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:13:04,717, shape_logger, INFO, finished in super init
+2026-05-28 14:13:04,717, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:13:04,717, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:13:04,717, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:13:04,717, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:13:23,912, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:13:23,913, shape_logger, INFO, extract json to temp list, there are 5 shapes
+2026-05-28 14:13:23,913, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:13:23,913, shape_logger, INFO, finished in super init
+2026-05-28 14:13:23,913, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:13:23,913, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:13:23,913, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:13:23,913, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:13:23,913, shape_logger, INFO, finished in super init
+2026-05-28 14:13:23,913, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:13:23,913, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:13:23,913, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:13:23,913, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:13:23,913, shape_logger, INFO, finished in super init
+2026-05-28 14:13:23,913, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:13:23,913, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:13:23,913, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:13:23,913, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:13:23,913, shape_logger, INFO, finished in super init
+2026-05-28 14:13:23,913, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:13:23,913, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:13:23,913, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:13:23,913, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:13:23,913, shape_logger, INFO, finished in super init
+2026-05-28 14:13:23,913, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:13:23,913, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:13:23,913, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:13:23,913, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:15:59,598, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:15:59,598, shape_logger, INFO, extract json to temp list, there are 5 shapes
+2026-05-28 14:15:59,599, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:15:59,599, shape_logger, INFO, finished in super init
+2026-05-28 14:15:59,599, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:15:59,599, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:15:59,599, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:15:59,599, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:15:59,599, shape_logger, INFO, finished in super init
+2026-05-28 14:15:59,599, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:15:59,599, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:15:59,599, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:15:59,599, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:15:59,599, shape_logger, INFO, finished in super init
+2026-05-28 14:15:59,599, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:15:59,599, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:15:59,599, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:15:59,599, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:15:59,599, shape_logger, INFO, finished in super init
+2026-05-28 14:15:59,599, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:15:59,599, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:15:59,599, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:15:59,599, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:15:59,599, shape_logger, INFO, finished in super init
+2026-05-28 14:15:59,599, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:15:59,599, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:15:59,599, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:15:59,599, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:15:59,599, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:15:59,599, shape_logger, WARNING, didnt find shape id 8 in the DB, didnt update.
+2026-05-28 14:16:05,778, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:16:05,778, shape_logger, INFO, extract json to temp list, there are 5 shapes
+2026-05-28 14:16:05,778, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:16:05,778, shape_logger, INFO, finished in super init
+2026-05-28 14:16:05,778, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:16:05,778, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:16:05,778, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:16:05,778, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:16:05,778, shape_logger, INFO, finished in super init
+2026-05-28 14:16:05,778, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:16:05,778, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:16:05,778, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:16:05,778, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:16:05,778, shape_logger, INFO, finished in super init
+2026-05-28 14:16:05,778, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:16:05,778, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:16:05,778, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:16:05,778, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:16:05,778, shape_logger, INFO, finished in super init
+2026-05-28 14:16:05,778, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:16:05,778, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:16:05,778, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:16:05,778, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:16:05,778, shape_logger, INFO, finished in super init
+2026-05-28 14:16:05,778, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:16:05,779, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:16:05,779, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:16:05,779, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:16:10,112, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 5
+2026-05-28 14:16:10,113, shape_logger, INFO, in function get_area to get area of rectangle. shape_id: 3
+2026-05-28 14:16:10,113, shape_logger, INFO, in function get_perimeter to get perimeter of rectangle. shape_id: 3
+2026-05-28 14:16:10,114, shape_logger, INFO, in function get_area to get area of square. shape_id: 4
+2026-05-28 14:16:10,114, shape_logger, INFO, in function get_perimeter to get perimeter of square. shape_id: 4
+2026-05-28 14:16:10,114, shape_logger, INFO, in function get_area to get area of circle. shape_id: 5
+2026-05-28 14:16:10,114, shape_logger, INFO, in function get_perimeter to get perimeter of circle. shape_id: 5
+2026-05-28 14:16:10,115, shape_logger, INFO, in function get_area to get area of circle. shape_id: 6
+2026-05-28 14:16:10,115, shape_logger, INFO, in function get_perimeter to get perimeter of circle. shape_id: 6
+2026-05-28 14:16:10,115, shape_logger, INFO, in function get_area to get area of square. shape_id: 7
+2026-05-28 14:16:10,115, shape_logger, INFO, in function get_perimeter to get perimeter of square. shape_id: 7
+2026-05-28 14:21:37,798, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:21:37,799, shape_logger, INFO, extract json to temp list, there are 5 shapes
+2026-05-28 14:21:37,799, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:21:37,799, shape_logger, INFO, finished in super init
+2026-05-28 14:21:37,799, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:21:37,799, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:21:37,799, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:21:37,799, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:21:37,799, shape_logger, INFO, finished in super init
+2026-05-28 14:21:37,799, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:21:37,799, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:21:37,799, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:21:37,799, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:21:37,799, shape_logger, INFO, finished in super init
+2026-05-28 14:21:37,799, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:21:37,799, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:21:37,799, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:21:37,799, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:21:37,799, shape_logger, INFO, finished in super init
+2026-05-28 14:21:37,799, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:21:37,799, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:21:37,799, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:21:37,799, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:21:37,799, shape_logger, INFO, finished in super init
+2026-05-28 14:21:37,799, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:21:37,799, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:21:37,799, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:21:37,799, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:21:37,799, shape_logger, INFO, in shape manager. in create shape with shape: triangle, id: 8
+2026-05-28 14:21:57,414, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:21:57,414, shape_logger, INFO, extract json to temp list, there are 5 shapes
+2026-05-28 14:21:57,414, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:21:57,414, shape_logger, INFO, finished in super init
+2026-05-28 14:21:57,414, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:21:57,414, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:21:57,414, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:21:57,414, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:21:57,414, shape_logger, INFO, finished in super init
+2026-05-28 14:21:57,414, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:21:57,414, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:21:57,414, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:21:57,414, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:21:57,414, shape_logger, INFO, finished in super init
+2026-05-28 14:21:57,414, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:21:57,414, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:21:57,414, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:21:57,414, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:21:57,414, shape_logger, INFO, finished in super init
+2026-05-28 14:21:57,414, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:21:57,414, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:21:57,414, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:21:57,414, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:21:57,414, shape_logger, INFO, finished in super init
+2026-05-28 14:21:57,414, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:21:57,414, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:21:57,415, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:21:57,415, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:21:57,415, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:21:57,415, shape_logger, ERROR, new_data not valid, can get only int or float and got <class 'float'>
+2026-05-28 14:31:18,002, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:31:18,002, shape_logger, INFO, extract json to temp list, there are 5 shapes
+2026-05-28 14:31:18,003, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:31:18,003, shape_logger, INFO, finished in super init
+2026-05-28 14:31:18,003, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:31:18,003, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:31:18,003, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:31:18,003, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:31:18,003, shape_logger, INFO, finished in super init
+2026-05-28 14:31:18,003, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:31:18,003, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:31:18,003, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:31:18,003, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:31:18,003, shape_logger, INFO, finished in super init
+2026-05-28 14:31:18,003, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:31:18,003, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:31:18,003, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:31:18,003, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:31:18,003, shape_logger, INFO, finished in super init
+2026-05-28 14:31:18,003, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:31:18,003, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:31:18,003, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:31:18,003, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:31:18,004, shape_logger, INFO, finished in super init
+2026-05-28 14:31:18,004, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:31:18,004, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:31:18,004, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:31:18,004, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:31:18,004, shape_logger, INFO, in shape manager. in get all shapes to print all shapes. len of shapes: 5
+2026-05-28 14:31:18,004, shape_logger, INFO, in function get_area to get area of rectangle. shape_id: 3
+2026-05-28 14:31:18,004, shape_logger, INFO, in function get_perimeter to get perimeter of rectangle. shape_id: 3
+2026-05-28 14:31:18,004, shape_logger, INFO, in function get_area to get area of square. shape_id: 4
+2026-05-28 14:31:18,004, shape_logger, INFO, in function get_perimeter to get perimeter of square. shape_id: 4
+2026-05-28 14:31:18,004, shape_logger, INFO, in function get_area to get area of circle. shape_id: 5
+2026-05-28 14:31:18,004, shape_logger, INFO, in function get_perimeter to get perimeter of circle. shape_id: 5
+2026-05-28 14:31:18,004, shape_logger, INFO, in function get_area to get area of circle. shape_id: 6
+2026-05-28 14:31:18,004, shape_logger, INFO, in function get_perimeter to get perimeter of circle. shape_id: 6
+2026-05-28 14:31:18,004, shape_logger, INFO, in function get_area to get area of square. shape_id: 7
+2026-05-28 14:31:18,004, shape_logger, INFO, in function get_perimeter to get perimeter of square. shape_id: 7
+2026-05-28 14:35:01,162, shape_logger, INFO, in shape manager. trying to load the shapes from json
+2026-05-28 14:35:01,162, shape_logger, INFO, extract json to temp list, there are 5 shapes
+2026-05-28 14:35:01,162, shape_logger, INFO, in super constuctor to init:  shape_id: 3, shape_type: rectangle, my_logger
+2026-05-28 14:35:01,162, shape_logger, INFO, finished in super init
+2026-05-28 14:35:01,162, shape_logger, INFO, sent shape_id: 3, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:35:01,162, shape_logger, INFO, finished in init in rectangle. shape_id: 3, shape_type: rectangle
+2026-05-28 14:35:01,162, shape_logger, INFO, trying to turn shape rectangle with id 3 back in to object style
+2026-05-28 14:35:01,162, shape_logger, INFO, in super constuctor to init:  shape_id: 4, shape_type: square, my_logger
+2026-05-28 14:35:01,162, shape_logger, INFO, finished in super init
+2026-05-28 14:35:01,162, shape_logger, INFO, sent shape_id: 4, shape_type: square, my_logger to super() in base class
+2026-05-28 14:35:01,162, shape_logger, INFO, finished in init in square. shape_id: 4
+2026-05-28 14:35:01,162, shape_logger, INFO, trying to turn shape square with id 4 back in to object style
+2026-05-28 14:35:01,162, shape_logger, INFO, in super constuctor to init:  shape_id: 5, shape_type: circle, my_logger
+2026-05-28 14:35:01,162, shape_logger, INFO, finished in super init
+2026-05-28 14:35:01,162, shape_logger, INFO, sent shape_id: 5, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:35:01,162, shape_logger, INFO, finished in init in circle. shape_id: 5
+2026-05-28 14:35:01,162, shape_logger, INFO, trying to turn shape circle with id 5 back in to object style
+2026-05-28 14:35:01,162, shape_logger, INFO, in super constuctor to init:  shape_id: 6, shape_type: circle, my_logger
+2026-05-28 14:35:01,162, shape_logger, INFO, finished in super init
+2026-05-28 14:35:01,162, shape_logger, INFO, sent shape_id: 6, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:35:01,162, shape_logger, INFO, finished in init in circle. shape_id: 6
+2026-05-28 14:35:01,162, shape_logger, INFO, trying to turn shape circle with id 6 back in to object style
+2026-05-28 14:35:01,162, shape_logger, INFO, in super constuctor to init:  shape_id: 7, shape_type: square, my_logger
+2026-05-28 14:35:01,162, shape_logger, INFO, finished in super init
+2026-05-28 14:35:01,162, shape_logger, INFO, sent shape_id: 7, shape_type: square, my_logger to super() in base class
+2026-05-28 14:35:01,162, shape_logger, INFO, finished in init in square. shape_id: 7
+2026-05-28 14:35:01,162, shape_logger, INFO, trying to turn shape square with id 7 back in to object style
+2026-05-28 14:35:01,162, shape_logger, INFO, in init of ShapeManager
+2026-05-28 14:35:01,162, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:35:01,162, shape_logger, ERROR, new_data not valid, can get only int and got <class 'float'>
+2026-05-28 14:35:01,162, shape_logger, INFO, in shape manager. trying to update the shape
+2026-05-28 14:35:01,162, shape_logger, ERROR, shape id not valid, can get only int and got <class 'float'>
+2026-05-28 14:35:01,162, shape_logger, INFO, in shape manager. in create shape with shape: triangle, id: 8

@@ -6,7 +6,7 @@ class Circle(shape.Shape):
     """
     class circle, inharits from class Shape
     """
-    def __init__(self, shape_id, shape_type, radius, my_logger): 
+    def __init__(self, shape_id, shape_type, my_logger, *args): 
        """
        init function 
 
@@ -18,7 +18,9 @@ class Circle(shape.Shape):
        """
        super().__init__(shape_id, shape_type, my_logger) 
        self.my_logger.info(f"sent shape_id: {shape_id}, shape_type: {shape_type}, my_logger to super() in base class")
-
+       if not args:
+          raise ValueError("Didnt get sizes, args in empty")
+       radius = args[0]
        if not isinstance(radius, (int, float)):
           self.my_logger.error(f"type of {radius} should be int/float and not {type(radius)}. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
           raise ValueError(f"type of {radius} should be int/float and not {type(radius)}")
@@ -52,7 +54,7 @@ class Circle(shape.Shape):
         a dict with the data of the shape to store in the DB
        """
        self.my_logger.info(f"in function to_dict to get dict of {self.shape_type}. shape_id: {self.shape_id}")
-       return {'id':self.shape_id, 'type':self.shape_type, 'radius':self.radius}
+       return {'id':self.shape_id, 'type':self.shape_type, 'length/radius':self.radius}
     
 
     def print_details(self):
@@ -61,6 +63,11 @@ class Circle(shape.Shape):
        Radius:{self.radius}\n
        Area: {self.get_area():.2f}\n
        Perimeter: {self.get_perimeter():.2f}\n"""
+    
+
+    def update_shape(self, new_size_1, new_size_2=None):
+       if new_size_1 is not None:
+            self.radius = new_size_1
  
 
    

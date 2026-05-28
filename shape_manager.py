@@ -14,12 +14,13 @@ class ShapeManager:
        """
        self.my_logger = logger.get_logger("shape_logger")
        self.shapes = [] 
+       self.contructors = {'circle': Circle, 'square':Square, 'rectangle':Rectangle}
        self.__load_from_json()
        self.my_logger.info("in init of ShapeManager")
        
 
 
-   def create_shape(self, shape, length=None, width=None, radius=None):
+   def create_shape(self, shape, length_radius=None, width=None):
        """
        create shape by users demand
 
@@ -36,21 +37,9 @@ class ShapeManager:
            self.my_logger.error(f"got wrong shape type {type(shape)}, can get only - str with: circle, square, rectangle")
            raise ValueError(f"got wrong shape type {type(shape)}, can get only - str with: circle, square, rectangle")
        
-       if shape == 'square':
-           self.my_logger.info("the shape wanted is square, sending to create in instans")
-           my_shape = Square(shape_id, shape, length, self.my_logger)
-       elif shape == 'rectangle':
-           self.my_logger.info("the shape wanted is rectangle, sending to create in instans")
-           my_shape = Rectangle(shape_id, shape, length, width, self.my_logger)
-       elif shape == 'circle':
-           self.my_logger.info("the shape wanted is circle, sending to create in instans")
-           my_shape = Circle(shape_id, shape, radius, self.my_logger)
-        
-       else:
-           self.my_logger.error("got wrong shape type, can get only - circle, square, rectangle")
-           raise ValueError("got wrong shape type, can get only - circle, square, rectangle")
-           
-        
+       contructor = self.contructors[shape]
+       my_shape = contructor(shape_id, shape, self.my_logger, length_radius, width)
+                   
        self.shapes.append(my_shape)
        self.__save_to_json()
        self.my_logger.info(f"shape {shape} with id {shape_id} created successfully, updated json")
@@ -63,13 +52,6 @@ class ShapeManager:
        """
        self.my_logger.info(f"in shape manager. in get all shapes to print all shapes. len of shapes: {len(self.shapes)}")
        for shape in self.shapes:
-           """if isinstance(shape, Circle):
-               print(f'ID: {shape.shape_id} \n Type: {shape.shape_type} \n Radius: {shape.radius} \n Area: {shape.get_area()} \n Perimeter: {shape.get_perimeter()}')
-           elif isinstance(shape, Square):
-               print(f'ID: {shape.shape_id} \n Type: {shape.shape_type} \n Side: {shape.length} \n Area: {shape.get_area()} \n Perimeter: {shape.get_perimeter()}')
-           elif isinstance(shape, Rectangle):
-               print(f'ID: {shape.shape_id} \n Type: {shape.shape_type} \n Side_len: {shape.length} \n  Side_wid: {shape.width} \n Area: {shape.get_area()} \n Perimeter: {shape.get_perimeter()}')
-            """
            print(shape.print_details())
          
 
@@ -85,42 +67,23 @@ class ShapeManager:
        self.my_logger.info("in shape manager. trying to update the shape")
        
        if not isinstance(shape_id, int):
-           self.my_logger.error(f"shape id not valid, can get only int or float and got {type(shape_id)}")
-           raise ValueError(f"shape id not valid, can get only int or float and got {type(shape_id)}")
+           self.my_logger.error(f"shape id not valid, can get only int and got {type(shape_id)}")
+           raise ValueError(f"shape id not valid, can get only int and got {type(shape_id)}")
        
        if new_data_1 and not isinstance(new_data_1, int):
-           self.my_logger.error(f"new_data not valid, can get only int or float and got {type(new_data_1)}")
-           raise ValueError(f"new_data not valid, can get only int or float and got {type(new_data_1)}")
+           self.my_logger.error(f"new_data not valid, can get only int and got {type(new_data_1)}")
+           raise ValueError(f"new_data not valid, can get only int and got {type(new_data_1)}")
        
        if new_data_2 and not isinstance(new_data_2, int):
-           self.my_logger.error(f"new_data not valid, can get only int or float and got {type(new_data_2)}")
-           raise ValueError(f"new_data not valid, can get only int or float and got {type(new_data_2)}")
+           self.my_logger.error(f"new_data not valid, can get only int and got {type(new_data_2)}")
+           raise ValueError(f"new_data not valid, can get only int and got {type(new_data_2)}")
               
        for shape in self.shapes:
            if shape.shape_id == shape_id:
-               if shape.shape_type == 'circle':
-                   self.my_logger.info("shape is circle, updating radius")
-                   shape.radius = new_data_1
-                   self.__save_to_json()
-                   self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
-                   return True
-               
-               elif shape.shape_type == 'square':
-                   self.my_logger.info("shape is square, updating length")
-                   shape.length = new_data_1
-                   self.__save_to_json()
-                   self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
-                   return True
-               
-               elif shape.shape_type == 'rectangle':
-                   if new_data_1 != None:
-                        shape.length = new_data_1
-                   if new_data_2 != None:
-                       shape.width = new_data_2
-                   self.__save_to_json()
-                   self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
-                   return True
-               
+               shape.update_shape(new_data_1, new_data_2)
+               self.__save_to_json()
+               self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
+               return True
        self.my_logger.warning(f"didnt find shape id {shape_id} in the DB, didnt update.")
        raise KeyError(f"the key {shape_id} does not exist.")
 
@@ -170,14 +133,14 @@ class ShapeManager:
                 try:
                     temp_shapes = json.load(json_file)
                     self.my_logger.info(f"extract json to temp list, there are {len(temp_shapes)} shapes")
-                    for item in temp_shapes:
-                        self.my_logger.info(f"trying to turn shape {item} back in to object style")
-                        if item['type'] == 'circle':
-                            self.shapes.append(Circle(item['id'], item['type'], item['radius'], self.my_logger))
-                        elif item['type'] == 'square':
-                            self.shapes.append(Square(item['id'], item['type'], item['side'], self.my_logger))
-                        elif item['type'] == 'rectangle':
-                            self.shapes.append(Rectangle(item['id'], item['type'], item['side_length'], item['side_width'], self.my_logger))
+                    for shape in temp_shapes:
+                        contructor = self.contructors[shape['type']]
+                        width = None
+                        if 'side_width' in shape.keys():
+                            width = shape['side_width']
+                        shape_back_to_object = contructor(shape['id'], shape['type'], self.my_logger, shape['length/radius'], width)
+                        self.shapes.append(shape_back_to_object)
+                        self.my_logger.info(f"trying to turn shape {shape['type']} with id {shape['id']} back in to object style")
                 except Exception as e:
                     self.my_logger.exception(f"there was an exeption while reading the json: {e}")
 
@@ -204,7 +167,6 @@ class ShapeManager:
        Returns:
             int: id of shape
        """
-       max_id = 0
        if not self.shapes:
            return 1
        return max(self.__get_keys()) + 1
@@ -230,6 +192,7 @@ class ShapeManager:
 
 def main():
     sm = ShapeManager()
+    sm.update_shape(8, 1)
     sm.create_shape('square')
     sm.get_all_shapes()
 

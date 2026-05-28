@@ -1,0 +1,62 @@
+2026-05-28 14:13:04,718, test, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, my_logger
+2026-05-28 14:13:04,718, test, INFO, finished in super init
+2026-05-28 14:13:04,718, test, INFO, sent shape_id: 1, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:13:04,718, test, INFO, finished in init in circle. shape_id: 1
+2026-05-28 14:13:04,718, test, INFO, in function get_area to get area of circle. shape_id: 1
+2026-05-28 14:13:23,913, test, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, my_logger
+2026-05-28 14:13:23,913, test, INFO, finished in super init
+2026-05-28 14:13:23,917, test, INFO, sent shape_id: 1, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:13:23,917, test, INFO, finished in init in circle. shape_id: 1
+2026-05-28 14:13:23,917, test, INFO, in function get_area to get area of circle. shape_id: 1
+2026-05-28 14:13:23,917, test, INFO, in function get_perimeter to get perimeter of circle. shape_id: 1
+2026-05-28 14:13:23,917, test, INFO, in function get_area to get area of circle. shape_id: 1
+2026-05-28 14:13:23,917, test, INFO, in function get_perimeter to get perimeter of circle. shape_id: 1
+2026-05-28 14:19:07,042, test, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, my_logger
+2026-05-28 14:19:07,042, test, INFO, finished in super init
+2026-05-28 14:19:07,043, test, INFO, sent shape_id: 1, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:19:07,043, test, INFO, finished in init in circle. shape_id: 1
+2026-05-28 14:19:07,043, test, INFO, in function get_area to get area of circle. shape_id: 1
+2026-05-28 14:19:07,043, test, INFO, in function get_perimeter to get perimeter of circle. shape_id: 1
+2026-05-28 14:20:52,859, test, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, my_logger
+2026-05-28 14:20:52,859, test, INFO, finished in super init
+2026-05-28 14:20:52,859, test, INFO, sent shape_id: 1, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:20:52,859, test, INFO, finished in init in circle. shape_id: 1
+2026-05-28 14:20:52,859, test, INFO, in super constuctor to init:  shape_id: 2, shape_type: square, my_logger
+2026-05-28 14:20:52,859, test, INFO, finished in super init
+2026-05-28 14:20:52,859, test, INFO, sent shape_id: 2, shape_type: square, my_logger to super() in base class
+2026-05-28 14:20:52,859, test, INFO, finished in init in square. shape_id: 2
+2026-05-28 14:20:52,859, test, INFO, in function get_area to get area of circle. shape_id: 1
+2026-05-28 14:20:52,859, test, INFO, in function get_area to get area of square. shape_id: 2
+2026-05-28 14:21:06,467, test, INFO, in super constuctor to init:  shape_id: 1, shape_type: rectangle, my_logger
+2026-05-28 14:21:06,467, test, INFO, finished in super init
+2026-05-28 14:21:06,467, test, INFO, sent shape_id: 1, shape_type: rectangle, my_logger to super() in base class
+2026-05-28 14:21:06,467, test, ERROR, type of None should be int/float and not <class 'NoneType'>. shape_id: 1, shape_type: rectangle
+2026-05-28 14:21:27,155, test, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, my_logger
+2026-05-28 14:21:27,155, test, INFO, finished in super init
+2026-05-28 14:21:27,155, test, INFO, sent shape_id: 1, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:21:57,415, test, INFO, in super constuctor to init:  shape_id: 99, shape_type: circle, my_logger
+2026-05-28 14:21:57,415, test, INFO, finished in super init
+2026-05-28 14:21:57,415, test, INFO, sent shape_id: 99, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:21:57,415, test, INFO, finished in init in circle. shape_id: 99
+2026-05-28 14:33:15,568, test, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, my_logger
+2026-05-28 14:33:15,568, test, INFO, finished in super init
+2026-05-28 14:33:15,568, test, INFO, sent shape_id: 1, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:33:15,568, test, INFO, finished in init in circle. shape_id: 1
+2026-05-28 14:33:15,568, test, INFO, in function get_area to get area of circle. shape_id: 1
+2026-05-28 14:33:15,568, test, INFO, in function get_perimeter to get perimeter of circle. shape_id: 1
+2026-05-28 14:34:24,122, test, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, my_logger
+2026-05-28 14:34:24,122, test, INFO, finished in super init
+2026-05-28 14:34:24,122, test, INFO, sent shape_id: 1, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:34:24,122, test, INFO, finished in init in circle. shape_id: 1
+2026-05-28 14:34:24,122, test, INFO, in super constuctor to init:  shape_id: 2, shape_type: square, my_logger
+2026-05-28 14:34:24,122, test, INFO, finished in super init
+2026-05-28 14:34:24,122, test, INFO, sent shape_id: 2, shape_type: square, my_logger to super() in base class
+2026-05-28 14:34:24,122, test, INFO, finished in init in square. shape_id: 2
+2026-05-28 14:34:24,122, test, INFO, in function get_area to get area of circle. shape_id: 1
+2026-05-28 14:34:24,122, test, INFO, in function get_area to get area of square. shape_id: 2
+2026-05-28 14:35:01,153, test, INFO, in super constuctor to init:  shape_id: 1, shape_type: circle, my_logger
+2026-05-28 14:35:01,153, test, INFO, finished in super init
+2026-05-28 14:35:01,154, test, INFO, sent shape_id: 1, shape_type: circle, my_logger to super() in base class
+2026-05-28 14:35:01,154, test, INFO, in super constuctor to init:  shape_id: 1, shape_type: square, my_logger
+2026-05-28 14:35:01,154, test, INFO, finished in super init
+2026-05-28 14:35:01,154, test, INFO, sent shape_id: 1, shape_type: square, my_logger to super() in base class

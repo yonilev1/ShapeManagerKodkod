@@ -42,6 +42,9 @@ class Shape:
    def print_details(self):
        pass
    
+   def update_shape(self, shape, new_size_1, new_size_2=None):
+       pass
+   
 
 def main():
     my_logger = logger.get_logger("shape_my_logger")

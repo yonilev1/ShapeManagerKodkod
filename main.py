@@ -52,14 +52,14 @@ def main():
                     radius = int(input("Enter circles radius: "))
                     if radius <= 0:
                         raise ValueError("value cant be <= 0")
-                    id = shape_manager.create_shape('circle',radius=radius)
+                    id = shape_manager.create_shape('circle',length_radius=radius)
                     print(f"shape circle was created successfully with id: {id}!")
 
                 elif shape == 2:
                     side_length = int(input("Enter squares side length: "))
                     if side_length <= 0:
                         raise ValueError("value cant be <= 0")
-                    id = shape_manager.create_shape('square',length=side_length)
+                    id = shape_manager.create_shape('square',length_radius=side_length)
                     print(f"shape square was created successfully with id: {id}!")
 
                 elif shape == 3:
@@ -71,7 +71,7 @@ def main():
                     if side_lwidth <= 0:
                         raise ValueError("value cant be <= 0")
                     
-                    id = shape_manager.create_shape('rectangle',length=side_length, width=side_lwidth)
+                    id = shape_manager.create_shape('rectangle',length_radius=side_length, width=side_lwidth)
                     print(f"shape rectangle was created successfully with id: {id}!")
 
             case '2':
@@ -117,6 +117,8 @@ def main():
                         if side_width <= 0:
                             raise ValueError("length of side cant be <= 0")
                         did_update = shape_manager.update_shape(id, side_length, side_width)
+                    else:
+                        raise ValueError("options are l/w/b only.")
                 if did_update:
                     print(f"shape {id} was edited successfully!")
 

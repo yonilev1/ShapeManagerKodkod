@@ -1,18 +1,28 @@
 [
     {
-        "id": 2,
-        "type": "circle",
-        "radius": 2
-    },
-    {
         "id": 3,
         "type": "rectangle",
-        "side_length": 1,
-        "side_width": 2
+        "length/radius": 2,
+        "side_width": 3
     },
     {
         "id": 4,
         "type": "square",
-        "side": 6
+        "length/radius": 5
+    },
+    {
+        "id": 5,
+        "type": "circle",
+        "length/radius": 3
+    },
+    {
+        "id": 6,
+        "type": "circle",
+        "length/radius": 5
+    },
+    {
+        "id": 7,
+        "type": "square",
+        "length/radius": 5
     }
 ]
