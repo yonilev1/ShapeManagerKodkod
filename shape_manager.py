@@ -87,7 +87,7 @@ class ShapeManager:
            self.my_logger.error(f"shape id not valid, can get only int or float and got {type(shape_id)}")
            raise ValueError(f"shape id not valid, can get only int or float and got {type(shape_id)}")
        
-       if not isinstance(new_data_1, int):
+       if new_data_1 and not isinstance(new_data_1, int):
            self.my_logger.error(f"new_data not valid, can get only int or float and got {type(new_data_1)}")
            raise ValueError(f"new_data not valid, can get only int or float and got {type(new_data_1)}")
        
@@ -110,9 +110,9 @@ class ShapeManager:
                    self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
                    return True
                elif shape.shape_type == 'rectangle':
-                   if new_data_1:
+                   if new_data_1 != None:
                         shape.length = new_data_1
-                   if new_data_2:
+                   if new_data_2 != None:
                        shape.width = new_data_2
                    self.__save_to_json()
                    self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
@@ -220,7 +220,7 @@ class ShapeManager:
            if shape.shape_id == id:
                self.my_logger.info(f"found the shape by its id: {id}, returning shapes kind")
                return shape.shape_type
-       self.my_logger.werning(f"didnt find the id: {id}")
+       self.my_logger.warning(f"didnt find the id: {id}")
        raise KeyError(f"didnt find the id: {id}")
 
 
