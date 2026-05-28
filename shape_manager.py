@@ -63,13 +63,14 @@ class ShapeManager:
        """
        self.my_logger.info(f"in shape manager. in get all shapes to print all shapes. len of shapes: {len(self.shapes)}")
        for shape in self.shapes:
-           if isinstance(shape, Circle):
+           """if isinstance(shape, Circle):
                print(f'ID: {shape.shape_id} \n Type: {shape.shape_type} \n Radius: {shape.radius} \n Area: {shape.get_area()} \n Perimeter: {shape.get_perimeter()}')
            elif isinstance(shape, Square):
                print(f'ID: {shape.shape_id} \n Type: {shape.shape_type} \n Side: {shape.length} \n Area: {shape.get_area()} \n Perimeter: {shape.get_perimeter()}')
            elif isinstance(shape, Rectangle):
                print(f'ID: {shape.shape_id} \n Type: {shape.shape_type} \n Side_len: {shape.length} \n  Side_wid: {shape.width} \n Area: {shape.get_area()} \n Perimeter: {shape.get_perimeter()}')
-            
+            """
+           print(shape.print_details())
          
 
 

@@ -53,6 +53,14 @@ class Circle(shape.Shape):
        """
        self.my_logger.info(f"in function to_dict to get dict of {self.shape_type}. shape_id: {self.shape_id}")
        return {'id':self.shape_id, 'type':self.shape_type, 'radius':self.radius}
+    
+
+    def print_details(self):
+       return f"""ID: {self.shape_id}\n
+       Type: {self.shape_type}\n
+       Radius:{self.radius}\n
+       Area: {self.get_area():.2f}\n
+       Perimeter: {self.get_perimeter():.2f}\n"""
  
 
    

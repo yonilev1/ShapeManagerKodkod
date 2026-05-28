@@ -54,6 +54,13 @@ class Square(shape.Shape):
        return {'id':self.shape_id, 'type':self.shape_type, 'side':self.length}
     
 
+    def print_details(self):
+       return f"""ID: {self.shape_id}\n
+       Type: {self.shape_type}\n
+       Side:{self.length}\n
+       Area: {self.get_area():.2f}\n
+       Perimeter: {self.get_perimeter():.2f}\n"""
+
    
 def main():
     my_logger = logger.get_logger("square_my_logger")

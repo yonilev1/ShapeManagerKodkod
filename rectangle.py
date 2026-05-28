@@ -58,6 +58,15 @@ class Rectangle(shape.Shape):
        """
        self.my_logger.info(f"in function to_dict to get dict of {self.shape_type}. shape_id: {self.shape_id}")
        return {'id':self.shape_id, 'type':self.shape_type, 'side_length':self.length, 'side_width':self.width}
+    
+
+    def print_details(self):
+       return f"""ID: {self.shape_id}\n
+       Type: {self.shape_type}\n
+       Side Length:{self.length}\n
+       Side Width:{self.width}\n
+       Area: {self.get_area():.2f}\n
+       Perimeter: {self.get_perimeter():.2f}\n"""
 
 
 def main():

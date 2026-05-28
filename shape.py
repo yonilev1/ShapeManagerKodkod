@@ -39,6 +39,9 @@ class Shape:
    def to_dict(self): 
        pass 
    
+   def print_details(self):
+       pass
+   
 
 def main():
     my_logger = logger.get_logger("shape_my_logger")
