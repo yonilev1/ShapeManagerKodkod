@@ -204,6 +204,24 @@ class ShapeManager:
        if not self.shapes:
            return 1
        return max(self.__get_keys()) + 1
+   
+
+   def get_shape_by_id(self, id):
+       """
+       function to get the kind of shape by its id
+
+       Args:
+            id(int): shapes uid
+        
+        Returns:
+            str: the kind of shape
+       """
+       for shape in self.shapes:
+           if shape.shape_id == id:
+               self.my_logger.info(f"found the shape by its id: {id}, returning shapes kind")
+               return shape.shape_type
+       self.my_logger.werning(f"didnt find the id: {id}")
+       raise KeyError(f"didnt find the id: {id}")
 
 
 def main():

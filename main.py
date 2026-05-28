@@ -79,20 +79,46 @@ def main():
 
             case '3':
                 id = int(input("Enter shapes id to update: "))
-                side_1 = int(input("Enter the length/radius to update: "))
-                if side_1 <= 0:
-                        raise ValueError("value cant be <= 0")
+                shape_kind = shape_manager.get_shape_by_id(id)
                 
-                side_2 = int(input("Enter the width to update (if square or circle, put -1): "))
-                if side_2 == 0 or side_2 < -1:
-                        raise ValueError("value cant be 0 or less then -1")
+                if shape_kind == 'square':
+                    side_length = int(input("Enter the length to update: "))
+                    if side_length <= 0:
+                        raise ValueError("length of side cant be <= 0")
+                    did_update = shape_manager.update_shape(id, side_length)
                 
-                if side_2 == -1:
-                    side_2 = None
+                elif shape_kind == 'circle':
+                    radius = int(input("Enter the radius to update: "))
+                    if radius <= 0:
+                        raise ValueError("radius cant be <= 0")
+                    did_update = shape_manager.update_shape(id, radius)
+                
 
-                did_update = shape_manager.update_shape(id, side_1, side_2)
-                if did_update:
-                    print(f"shape {id} was edited successfully!")
+                elif shape_kind == 'rectangle':
+                    did_update = False
+                    what_to_update = input("Do you want to update length (l), width (w) or both (b)? ")
+                    if what_to_update == 'l':
+                        side_length = int(input("Enter the length to update: "))
+                        if side_length <= 0:
+                            raise ValueError("length of side cant be <= 0")
+                        did_update = shape_manager.update_shape(id, side_length)
+                        
+                    elif what_to_update == 'w':
+                        side_width = int(input("Enter the width to update: "))
+                        if side_width <= 0:
+                            raise ValueError("length of side cant be <= 0")
+                        did_update = shape_manager.update_shape(id, side_width)
+                        
+                    elif what_to_update == 'b':
+                        side_length = int(input("Enter the length to update: "))
+                        if side_length <= 0:
+                            raise ValueError("length of side cant be <= 0")
+                        side_width = int(input("Enter the width to update: "))
+                        if side_width <= 0:
+                            raise ValueError("length of side cant be <= 0")
+                        did_update = shape_manager.update_shape(id, side_length, side_width)
+                    if did_update:
+                        print(f"shape {id} was edited successfully!")
 
             case '4':
                 id = int(input("Enter shapes id to delete: "))
@@ -106,6 +132,9 @@ def main():
             case _:
                 print("choice not valid. choose again.")
     except ValueError as e:
+        print(e)
+
+    except KeyError as e:
         print(e)
 
     except Exception as e:
