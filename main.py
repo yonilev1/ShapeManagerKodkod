@@ -53,14 +53,14 @@ def main():
                     if radius <= 0:
                         raise ValueError("value cant be <= 0")
                     id = shape_manager.create_shape('circle',radius=radius)
-                    print(f"shape {shape} was created successfully with id: {id}!")
+                    print(f"shape circle was created successfully with id: {id}!")
 
                 elif shape == 2:
                     side_length = int(input("Enter squares side length: "))
                     if side_length <= 0:
                         raise ValueError("value cant be <= 0")
                     id = shape_manager.create_shape('square',length=side_length)
-                    print(f"shape {shape} was created successfully with id: {id}!")
+                    print(f"shape square was created successfully with id: {id}!")
 
                 elif shape == 3:
                     side_length = int(input("Enter rectangles side length: "))
@@ -72,7 +72,7 @@ def main():
                         raise ValueError("value cant be <= 0")
                     
                     id = shape_manager.create_shape('rectangle',length=side_length, width=side_lwidth)
-                    print(f"shape {shape} was created successfully with id: {id}!")
+                    print(f"shape rectangle was created successfully with id: {id}!")
 
             case '2':
                 shape_manager.get_all_shapes()

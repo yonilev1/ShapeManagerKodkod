@@ -1,0 +1,2 @@
+2026-05-28 11:04:23,924, shape_my_logger, INFO, in super constuctor to init:  shape_id: 1, shape_type: shape, my_logger
+2026-05-28 11:04:23,924, shape_my_logger, INFO, finished in super init
