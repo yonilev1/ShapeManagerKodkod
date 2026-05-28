@@ -103,12 +103,14 @@ class ShapeManager:
                    self.__save_to_json()
                    self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
                    return True
+               
                elif shape.shape_type == 'square':
                    self.my_logger.info("shape is square, updating length")
                    shape.length = new_data_1
                    self.__save_to_json()
                    self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
                    return True
+               
                elif shape.shape_type == 'rectangle':
                    if new_data_1 != None:
                         shape.length = new_data_1
@@ -117,6 +119,7 @@ class ShapeManager:
                    self.__save_to_json()
                    self.my_logger.info(f"apdated the shape {shape.shape_type} with id {shape.shape_id}, and save to json")
                    return True
+               
        self.my_logger.warning(f"didnt find shape id {shape_id} in the DB, didnt update.")
        raise KeyError(f"the key {shape_id} does not exist.")
 
