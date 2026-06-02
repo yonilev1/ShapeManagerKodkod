@@ -185,14 +185,15 @@ class ShapeManager:
        for shape in self.shapes:
            if shape.shape_id == id:
                self.my_logger.info(f"found the shape by its id: {id}, returning shapes kind")
-               return shape.shape_type
+               return shape.to_dict()
        self.my_logger.warning(f"didnt find the id: {id}")
        raise KeyError(f"didnt find the id: {id}")
 
 
 def main():
     sm = ShapeManager()
-    sm.update_shape(8, 1)
+    sm.get_shape_by_id(12)
+    """sm.update_shape(8, 1)
     sm.create_shape('square')
     sm.get_all_shapes()
 
@@ -200,9 +201,7 @@ def main():
     sm.get_all_shapes()
 
     sm.create_shape('rectangle')
-    sm.get_all_shapes()
-
-
+    sm.get_all_shapes()"""
 
 
 if __name__ == "__main__":

@@ -21,9 +21,14 @@ def create_shape(shape : Shape):
 
 
 
-@app.get('/shapes')
-def get_all_shapes():
-    pass
+@app.get('/shapes/{id}')
+def get_all_shapes(id:int):
+    sm = shape_manager.ShapeManager()
+    try:
+        return sm.get_shape_by_id(id)
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
+    
 
 
 
