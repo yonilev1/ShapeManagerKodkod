@@ -1,4 +1,7 @@
 from fastapi import FastAPI, HTTPException, status
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import shape_manager
 
@@ -13,6 +16,19 @@ class UpdateShape(BaseModel):
 
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_methods=['*'],
+    allow_headers=['*'],
+)
+
+app.mount('/static', StaticFiles(directory='static'), name='static')
+
+@app.get('/')
+def root():
+    return FileResponse('static/index.html')
 
 @app.post('/shapes', status_code=status.HTTP_201_CREATED)
 def create_shape(shape : CreateShape):
