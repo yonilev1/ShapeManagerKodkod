@@ -80,10 +80,19 @@ class ShapeManager:
        if new_data_1 and not isinstance(new_data_1, int):
            self.my_logger.error(f"new_data not valid, can get only int and got {type(new_data_1)}")
            raise ValueError(f"new_data not valid, can get only int and got {type(new_data_1)}")
+
+       if new_data_1 <= 0:
+          self.my_logger.error(f"new_data should be larger then 0. shape_id: {shape_id}")
+          raise ValueError(f"new_data should be larger then 0. shape_id: {shape_id}")
        
        if new_data_2 and not isinstance(new_data_2, int):
            self.my_logger.error(f"new_data not valid, can get only int and got {type(new_data_2)}")
            raise ValueError(f"new_data not valid, can get only int and got {type(new_data_2)}")
+       
+       if self.get_shape_type_by_id(shape_id) == 'rectangle':
+            if new_data_2 <= 0:
+                self.my_logger.error(f"new_data should be larger then 0. shape_id: {shape_id}")
+                raise ValueError(f"new_data should be larger then 0. shape_id: {shape_id}")
               
        for shape in self.shapes:
            if shape.shape_id == shape_id:
@@ -181,6 +190,23 @@ class ShapeManager:
 
    def get_shape_by_id(self, id):
        """
+       function to get the shapes dict by its id
+
+       Args:
+            id(int): shapes uid
+        
+        Returns:
+            dict: the shape
+       """
+       for shape in self.shapes:
+           if shape.shape_id == id:
+               self.my_logger.info(f"found the shape by its id: {id}, returning shapes kind")
+               return shape.to_dict()
+       self.my_logger.warning(f"didnt find the id: {id}")
+       raise KeyError(f"didnt find the id: {id}")
+   
+   def get_shape_type_by_id(self, id):
+       """
        function to get the kind of shape by its id
 
        Args:
@@ -192,7 +218,7 @@ class ShapeManager:
        for shape in self.shapes:
            if shape.shape_id == id:
                self.my_logger.info(f"found the shape by its id: {id}, returning shapes kind")
-               return shape.to_dict()
+               return shape.shape_type
        self.my_logger.warning(f"didnt find the id: {id}")
        raise KeyError(f"didnt find the id: {id}")
    
@@ -208,6 +234,37 @@ class ShapeManager:
        for shape in self.shapes:
            sum_area += shape.get_area()
        return format(sum_area, ".2f")
+   
+
+   def count_shapes(self):
+       """
+       count how meny shape we have
+
+       Returns:
+            int: amount of shapes
+       """
+       return len(self.shapes)
+   
+   def get_shapes_by_type(self, type):
+        """
+        get all shapes fro specific type
+
+        Returns:    
+            dict: all shapes from certion type
+        """
+        shapes_by_type = {}
+        for shape in self.shapes:
+            if shape.shape_type == type:
+                if shape.shape_type == 'circle':
+                    shapes_by_type[shape.shape_id] = {'shape type':shape.shape_type, 'radius':shape.radius}
+                elif shape.shape_type == 'square':
+                    shapes_by_type[shape.shape_id] = {'shape type':shape.shape_type, 'length':shape.length}
+                elif shape.shape_type == 'rectangle':
+                    shapes_by_type[shape.shape_id] = {'shape type':shape.shape_type, 'length':shape.length, 'width':shape.width}
+        return shapes_by_type
+
+        
+            
 
 def main():
     sm = ShapeManager()
