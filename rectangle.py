@@ -24,11 +24,21 @@ class Rectangle(shape.Shape):
        if not isinstance(length, (int, float)):
           self.my_logger.error(f"type of {length} should be int/float and not {type(length)}. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
           raise ValueError(f"type of {length} should be int/float and not {type(length)}")
+       
+       if length <= 0:
+          self.my_logger.error(f"length should be larger then 0. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
+          raise ValueError(f"length should be larger then 0. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
+
        self.length = length
 
        if not isinstance(width, (int, float)):
           self.my_logger.error(f"type of {width} should be int/float and not {type(width)}. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
           raise ValueError(f"type of {width} should be int/float and not {type(width)}")
+       
+       if width <= 0:
+          self.my_logger.error(f"width should be larger then 0. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
+          raise ValueError(f"width should be larger then 0. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
+      
        self.width = width
 
        self.my_logger.info(f"finished in init in {self.shape_type}. shape_id: {self.shape_id}, shape_type: {self.shape_type}")

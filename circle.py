@@ -20,10 +20,16 @@ class Circle(shape.Shape):
        self.my_logger.info(f"sent shape_id: {shape_id}, shape_type: {shape_type}, my_logger to super() in base class")
        if not args:
           raise ValueError("Didnt get sizes, args in empty")
+       
        radius = args[0]
        if not isinstance(radius, (int, float)):
           self.my_logger.error(f"type of {radius} should be int/float and not {type(radius)}. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
           raise ValueError(f"type of {radius} should be int/float and not {type(radius)}")
+       
+       if radius <= 0:
+          self.my_logger.error(f"radius should be larger then 0. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
+          raise ValueError(f"radius should be larger then 0. shape_id: {self.shape_id}, shape_type: {self.shape_type}")
+       
        self.radius = radius
 
        self.my_logger.info(f"finished in init in {self.shape_type}. shape_id: {self.shape_id}")

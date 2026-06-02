@@ -1,0 +1,31 @@
+from fastapi import FastAPI, HTTPException, status
+from pydantic import BaseModel
+import shape_manager
+
+class Shape(BaseModel):
+    shape_type : str
+    length_radius : int
+    width : int | None
+
+
+app = FastAPI()
+
+@app.post('/shapes', status_code=status.HTTP_201_CREATED)
+def create_shape(shape : Shape):
+    sm = shape_manager.ShapeManager()
+    try:
+        created_shape = sm.create_shape(shape.shape_type, shape.length_radius, shape.width)
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"{e}")
+    return {'shape id': created_shape}
+
+
+
+@app.get('/shapes')
+def get_all_shapes():
+    pass
+
+
+
+
+
