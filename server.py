@@ -7,10 +7,8 @@ class CreateShape(BaseModel):
     length_radius : int
     width : int | None = None
 
-
 class UpdateShape(BaseModel):
-    shape_id : int
-    length_radius : int
+    length_or_radius : int
     width : int | None = None
 
 
@@ -30,18 +28,7 @@ def create_shape(shape : CreateShape):
 def get_all_shapes():
     sm = shape_manager.ShapeManager()
     try:
-        return sm.get_all_shapes()
-    except Exception as e:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
-    
-
-@app.delete('/shapes/{id}')
-def delete_shape_by_id(id:int):
-    sm = shape_manager.ShapeManager()
-    try:
-        did_delete = sm.delete_shape(id)
-        if did_delete:
-            return {'message': 'shape deleted successfuly'}
+        return {'message': sm.get_all_shapes()}
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
     
@@ -50,13 +37,13 @@ def delete_shape_by_id(id:int):
 def get_total_shapes_area():
     sm = shape_manager.ShapeManager()
     try:
-        return sm.get_sum_area()
+        return {'message': sm.get_sum_area()}
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")    
     
 
 @app.get('/shapes/count')
-def get_all_shapes():
+def get_amount_of_shapes():
     sm = shape_manager.ShapeManager()
     return {'message': f'there are: {sm.count_shapes()} shapes in total.'}
     
@@ -65,22 +52,9 @@ def get_all_shapes():
 def get_shape_by_id(id:int):
     sm = shape_manager.ShapeManager()
     try:
-        return sm.get_shape_by_id(id)
+        return {'message': sm.get_shape_by_id(id)}
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
-    
-
-@app.put('/shapes')
-def update_shape(update_shape : UpdateShape):
-    sm = shape_manager.ShapeManager()
-    try:
-        did_update = sm.update_shape(update_shape.shape_id, update_shape.length_radius, update_shape.width)
-        if did_update:
-            return {"message": f'shape {update_shape.shape_id} updated successfully.'}
-        else:
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"didnt find shape id {update_shape.shape_id}")
-    except Exception as e:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"{e}")
     
 
 @app.get('/shapes/type/{type}')
@@ -93,7 +67,25 @@ def get_shapes_by_type(type:str):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"{e}")
     
 
+@app.put('/shapes/{id}')
+def update_shape(id:int, update : UpdateShape):
+    sm = shape_manager.ShapeManager()
+    try:
+        did_update = sm.update_shape(id, update.length_or_radius, update.width)
+        if did_update:
+            return {"message": f'shape {id} updated successfully.'}
+        else:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"didnt find shape id {id}")
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"{e}")
+    
 
-
-
-
+@app.delete('/shapes/{id}')
+def delete_shape_by_id(id:int):
+    sm = shape_manager.ShapeManager()
+    try:
+        did_delete = sm.delete_shape(id)
+        if did_delete:
+            return {'message': 'shape deleted successfuly'}
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
