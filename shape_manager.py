@@ -50,11 +50,18 @@ class ShapeManager:
        """
        print all shapes in this way
        """
+       all_shapes = {}
        self.my_logger.info(f"in shape manager. in get all shapes to print all shapes. len of shapes: {len(self.shapes)}")
        for shape in self.shapes:
-           print(shape.print_details())
-         
-
+           if shape.shape_type == 'circle':
+                all_shapes[shape.shape_id] = {'shape type':shape.shape_type, 'radius':shape.radius}
+           elif shape.shape_type == 'square':
+                all_shapes[shape.shape_id] = {'shape type':shape.shape_type, 'length':shape.length}
+           elif shape.shape_type == 'rectangle':
+                all_shapes[shape.shape_id] = {'shape type':shape.shape_type, 'length':shape.length, 'width':shape.width}
+            
+       return all_shapes
+           
 
    def update_shape(self, shape_id, new_data_1, new_data_2=None): 
        """
