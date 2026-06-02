@@ -195,7 +195,19 @@ class ShapeManager:
                return shape.to_dict()
        self.my_logger.warning(f"didnt find the id: {id}")
        raise KeyError(f"didnt find the id: {id}")
+   
 
+   def get_sum_area(self):
+       """
+       get sum of area of all shapes
+
+       Returns:
+            int: sum of area
+       """
+       sum_area = 0
+       for shape in self.shapes:
+           sum_area += shape.get_area()
+       return format(sum_area, ".2f")
 
 def main():
     sm = ShapeManager()

@@ -20,14 +20,6 @@ def create_shape(shape : Shape):
     return {'shape id': created_shape}
 
 
-
-@app.get('/shapes/{id}')
-def get_shape_by_id(id:int):
-    sm = shape_manager.ShapeManager()
-    try:
-        return sm.get_shape_by_id(id)
-    except Exception as e:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
     
 
 
@@ -38,6 +30,36 @@ def get_all_shapes():
         return sm.get_all_shapes()
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
+    
+
+@app.delete('/shapes/{id}')
+def delete_shape_by_id(id:int):
+    sm = shape_manager.ShapeManager()
+    try:
+        did_delete = sm.delete_shape(id)
+        if did_delete:
+            return {'message': 'shape deleted successfuly'}
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
+    
+
+@app.get('/shapes/total-area')
+def get_total_shapes_area():
+    sm = shape_manager.ShapeManager()
+    try:
+        return sm.get_sum_area()
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
+    
+
+@app.get('/shapes/{id}')
+def get_shape_by_id(id:int):
+    sm = shape_manager.ShapeManager()
+    try:
+        return sm.get_shape_by_id(id)
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
+
     
 
 
