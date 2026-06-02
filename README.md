@@ -1,6 +1,6 @@
-# Shapes API
+# Shapes Manager
 
-A RESTful API for managing geometric shapes — create, read, update, and delete circles, squares, and rectangles. Built with **FastAPI** and persisted to a local JSON file.
+A full-stack app for managing geometric shapes — create, read, update, and delete circles, squares, and rectangles. Built with **FastAPI** on the backend and a clean browser-based frontend.
 
 ---
 
@@ -11,6 +11,7 @@ A RESTful API for managing geometric shapes — create, read, update, and delete
 - Auto-incremented shape IDs
 - Per-shape logging to dedicated log files
 - JSON file-based persistence (no database required)
+- Built-in web UI served at `/`
 - Auto-generated interactive docs via FastAPI (`/docs`)
 
 ---
@@ -19,7 +20,7 @@ A RESTful API for managing geometric shapes — create, read, update, and delete
 
 ```
 shapes_project_kodkod/
-├── server.py          # FastAPI app — all HTTP endpoints
+├── server.py          # FastAPI app — all HTTP endpoints + static file serving
 ├── shape_manager.py   # Business logic layer (CRUD + persistence)
 ├── shape.py           # Abstract base class for shapes
 ├── circle.py          # Circle shape implementation
@@ -27,6 +28,8 @@ shapes_project_kodkod/
 ├── rectangle.py       # Rectangle shape implementation
 ├── logger.py          # Logging factory
 ├── shapes.json        # Persistent shape storage
+├── static/
+│   └── index.html     # Web UI frontend
 └── *.log              # Per-shape log files
 ```
 
@@ -37,12 +40,12 @@ shapes_project_kodkod/
 ### Prerequisites
 
 - Python 3.10+
-- `fastapi` and `uvicorn`
+- `fastapi`, `uvicorn`, and `aiofiles`
 
 ### Install dependencies
 
 ```bash
-pip install fastapi uvicorn
+pip install fastapi uvicorn aiofiles
 ```
 
 ### Run the server
@@ -51,8 +54,10 @@ pip install fastapi uvicorn
 uvicorn server:app --reload
 ```
 
-The API will be available at `http://127.0.0.1:8000`.  
-Interactive docs: `http://127.0.0.1:8000/docs`
+| URL | Description |
+|---|---|
+| `http://127.0.0.1:8000` | Web UI |
+| `http://127.0.0.1:8000/docs` | Interactive API docs |
 
 ---
 
