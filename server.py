@@ -1,6 +1,5 @@
 from fastapi import FastAPI, HTTPException, status
 from pydantic import BaseModel
-import shape_manager
 from routers import items
 import uvicorn
 
