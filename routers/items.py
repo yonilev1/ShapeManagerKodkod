@@ -109,4 +109,3 @@ def delete_shape_by_id(id:int, sm: shape_manager.ShapeManager = Depends(get_shap
         if str(e) == f"'the key {id} does not exist.'":
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"id {id} was not found")
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"{e}")
-
