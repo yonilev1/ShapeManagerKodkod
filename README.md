@@ -19,15 +19,17 @@ A RESTful API for managing geometric shapes — create, read, update, and delete
 
 ```
 shapes_project_kodkod/
-├── server.py          # FastAPI app — all HTTP endpoints
-├── shape_manager.py   # Business logic layer (CRUD + persistence)
-├── shape.py           # Abstract base class for shapes
-├── circle.py          # Circle shape implementation
-├── square.py          # Square shape implementation
-├── rectangle.py       # Rectangle shape implementation
-├── logger.py          # Logging factory
-├── shapes.json        # Persistent shape storage
-└── *.log              # Per-shape log files
+├── server.py              # FastAPI app entry point — mounts routers
+├── routers/
+│   └── items.py           # All HTTP route handlers (CRUD endpoints)
+├── shape_manager.py       # Business logic layer (CRUD + persistence)
+├── shape.py               # Abstract base class for shapes
+├── circle.py              # Circle shape implementation
+├── square.py              # Square shape implementation
+├── rectangle.py           # Rectangle shape implementation
+├── logger.py              # Logging factory
+├── shapes.json            # Persistent shape storage
+└── *.log                  # Per-shape log files
 ```
 
 ---
@@ -49,6 +51,12 @@ pip install fastapi uvicorn
 
 ```bash
 uvicorn server:app --reload
+```
+
+Or run directly:
+
+```bash
+python server.py
 ```
 
 The API will be available at `http://127.0.0.1:8000`.  
@@ -183,7 +191,6 @@ Each shape type writes events to its own log file:
 
 | Logger | File |
 |---|---|
-| ShapeManager | `shape_logger_logs.log` |
 | Circle | `circle_logger_logs.log` |
 | Square | `square_logger_logs.log` |
 | Rectangle | `rectangle_logger_logs.log` |
