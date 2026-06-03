@@ -1,8 +1,18 @@
 from fastapi import FastAPI, HTTPException, status
 from pydantic import BaseModel
 import shape_manager
+from routers import items
+import uvicorn
 
-class CreateShape(BaseModel):
+
+app = FastAPI()
+app.include_router(items.router)
+
+
+if __name__ == "__main__":
+    uvicorn.run('server:app', host='127.0.0.1', port=8000, reload=False)
+
+'''class CreateShape(BaseModel):
     """Request body for creating a new shape."""
     shape_type : str
     length_radius : int
@@ -13,8 +23,6 @@ class UpdateShape(BaseModel):
     length_or_radius : int
     width : int | None = None
 
-
-app = FastAPI()
 
 @app.post('/shapes', status_code=status.HTTP_201_CREATED)
 def create_shape(shape : CreateShape):
@@ -42,7 +50,7 @@ def get_total_shapes_area():
     """Return the sum of areas of all shapes."""
     sm = shape_manager.ShapeManager()
     try:
-        return {'message': sm.get_sum_area()}
+        return {'message': f'The sum of all area: {sm.get_sum_area()}'}
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
 
@@ -51,7 +59,10 @@ def get_total_shapes_area():
 def get_amount_of_shapes():
     """Return the total number of shapes."""
     sm = shape_manager.ShapeManager()
-    return {'message': f'there are: {sm.count_shapes()} shapes in total.'}
+    try:
+        return {'message': f'there are: {sm.count_shapes()} shapes in total.'}
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
 
 
 @app.get('/shapes/{id}')
@@ -69,6 +80,8 @@ def get_shapes_by_type(type:str):
     """Return all shapes matching the given type."""
     sm = shape_manager.ShapeManager()
     try:
+        if type not in ['circle', 'square', 'rectangle']:
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"{e}")
         types = sm.get_shapes_by_type(type)
         return {'message': types}
     except Exception as e:
@@ -97,5 +110,7 @@ def delete_shape_by_id(id:int):
         did_delete = sm.delete_shape(id)
         if did_delete:
             return {'message': 'shape deleted successfuly'}
+        else:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"id {id} was not found")
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"{e}")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"{e}")'''

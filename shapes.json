@@ -1,11 +1,5 @@
 [
     {
-        "id": 3,
-        "type": "rectangle",
-        "length/radius": 2,
-        "side_width": 3
-    },
-    {
         "id": 4,
         "type": "square",
         "length/radius": 5
