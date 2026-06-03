@@ -1,5 +1,4 @@
-from fastapi import FastAPI, HTTPException, status
-from pydantic import BaseModel
+from fastapi import FastAPI
 from routers import items
 import uvicorn
 
